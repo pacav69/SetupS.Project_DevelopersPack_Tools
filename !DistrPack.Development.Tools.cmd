@@ -134,10 +134,10 @@ if [%DoUploads%]==[No] goto Exit
 cd "%~dp0"
 copy %ExtraApp%_v%ProjectDate%\%ExtraApp%.htm /y >nul:
 
-:Bintray (requires cURL)
-%AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink3%"
-call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe files %ExtraApp% %ProjectDate%
-call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe.md5 files %ExtraApp% %ProjectDate%
+@REM :Bintray (requires cURL)
+@REM %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink3%"
+@REM call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe files %ExtraApp% %ProjectDate%
+@REM call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe.md5 files %ExtraApp% %ProjectDate%
 
 :GoogleCode (requires python)
 rem %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink4%"
