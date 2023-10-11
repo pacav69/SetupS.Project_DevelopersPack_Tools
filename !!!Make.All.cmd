@@ -64,7 +64,7 @@ echo copying UploadMe.cmd files to files directory..
 copy "UploadMe.cmd" "%completedfiles%\" /y >nul:
 @REM update.ini
 copy "update.ini" "%completedfiles%\" /y >nul:
-echo copying Uchecksums files to files directory..
+echo copying Checksums files to files directory..
 @REM Development.Tools_v2023-10-08.exe.md5
 copy "*.md5" "%completedfiles%\" /y >nul:
 @REM ChangeLog.txt
