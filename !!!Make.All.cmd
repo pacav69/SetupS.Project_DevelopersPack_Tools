@@ -35,6 +35,7 @@ rem call !DistrPack.ExtraApp.cmd %ProjectVersion% %ProjectDate% %Upload% ssGooey
 :Movefiles
 echo Moving files to files directory ...
 set completedfiles=files
+set sc=Source.Code
 
 :move files to files directory
 @REM echo moving files to files directory..
@@ -47,6 +48,7 @@ echo copying htm files to files directory..
 @REM copy "SetupS-*.htm" "%completedfiles%\" /y >nul:
 copy "*.htm" "%completedfiles%\" /y >nul:
 @REM echo copying SetupS-*.png files to files directory..
+copy "%~dp0%sc%\SetupS-*.png" "%~dp0\%completedfiles%" /y >nul
 @REM copy "%~dp0SetupS-*.png" "%~dp0\%completedfiles%" /y >nul
 echo copying .7z files to files directory..
 @REM
@@ -63,7 +65,7 @@ copy "UploadMe.cmd" "%completedfiles%\" /y >nul:
 @REM update.ini
 copy "update.ini" "%completedfiles%\" /y >nul:
 echo copying Uchecksums files to files directory..
-@REMDevelopment.Tools_v2023-10-08.exe.md5
+@REM Development.Tools_v2023-10-08.exe.md5
 copy "*.md5" "%completedfiles%\" /y >nul:
 @REM ChangeLog.txt
 copy "ChangeLog.txt" "%completedfiles%\" /y >nul:
@@ -97,6 +99,7 @@ if exist "UploadMe.cmd" del /F /Q "UploadMe.cmd" >nul:
 if exist "update.ini" del /F /Q "update.ini" >nul:
 @REM echo deleting checksums
 if exist "*.md5" del /F /Q "checksums*.md5" >nul:
+@REM SetupS-title.png
 
 @REM echo  #######################################################
 @REM echo   ### Final cleanup
