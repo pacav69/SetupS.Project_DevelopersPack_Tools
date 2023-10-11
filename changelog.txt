@@ -1,0 +1,13 @@
+Note: The goal is to have any additions/changes/options to NOT affect the original default
+      behavior if not used or implemented (for backwards compatibility); but sometimes this is
+      not always possible especially when adding new features.
+
+
+
+
+
+---------------------------------------------
+11Oct2023
+---------------------------------------------
+added git-large-file-storage (git lfs)
+initial setup on github

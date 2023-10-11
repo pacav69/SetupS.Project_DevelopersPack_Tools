@@ -209,6 +209,52 @@ copy "*.md5" "%completedfiles%\" /y >nul:
 copy "ChangeLog.txt" "%completedfiles%\" /y >nul:
 @REM pause
 
+@REM #######################################################
+@REM ### Cleaning
+@REM #######################################################
+:Cleaning
+echo #######################################################
+echo Cleaning up...
+echo.
+echo  Deleting compilied files after upload
+echo #######################################################
+cd "%~dp0"
+:Deleting files
+
+if exist "*.htm" del /F /Q "*.htm" >nul:
+@REM echo deleting SetupS-*.png
+@REM if exist "SetupS-*.png" del /F /Q "SetupS-*.png" >nul:
+@REM echo deleting 7z
+if exist "*.7z" del /F /Q "*.7z" >nul:
+@REM echo deleting apz
+if exist "*.apz" del /F /Q "*.apz" >nul:
+@REM echo deleting exe
+if exist "*.exe" del /F /Q "*.exe" >nul:
+@REM echo deleting UploadMe.cmd
+if exist "UploadMe.cmd" del /F /Q "UploadMe.cmd" >nul:
+@REM echo deleting update.ini
+if exist "update.ini" del /F /Q "update.ini" >nul:
+@REM echo deleting checksums
+if exist "*.md5" del /F /Q "*.md5" >nul:
+
+@REM echo  #######################################################
+@REM echo   ### Final cleanup
+@REM echo #######################################################
+@REM %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "Kill"
+@REM @REM if exist "%ssApp%" rd /s /q "%ssApp%" >nul:
+@REM @REM if exist "%ppApp%" rd /s /q "%ppApp%" >nul:
+@REM @REM if exist "%scp%" rd /s /q "%scp%" >nul:
+@REM @REM if exist "%devpack%" rd /s /q "%devpack%" >nul:
+@REM @REM if exist "%ssUI%" rd /s /q "%ssUI%" >nul:
+@REM rem if exist "%*%.exe" del /F /Q "%*%.exe" >nul:
+@REM rem if exist "%*%.md5" del /F /Q "%*%.exe" >nul:
+@REM if exist "%~dp0%sc%\ssTek.chm" del /F /Q "%~dp0%sc%\ssTek.chm" >nul:
+@REM if exist "%~dp0%sc%\ssTek.html" del /F /Q "%~dp0%sc%\ssTek.html" >nul:
+@REM if exist "%~dp0%sc%\files" rd /s /q "%~dp0%sc%\files" >nul:
+@REM if exist "%~dp0%sc%\%EditorPath%\ssEditor.html" del /F /Q "%~dp0%sc%\%EditorPath%\ssEditor.html" >nul:
+@REM if exist "%~dp0%sc%\%EditorPath%\files" rd /s /q "%~dp0%sc%\%EditorPath%\files" >nul:
+@REM if exist "%sc%\originals" echo Originals already exists!
+
 echo.
 echo %ExtraApp% v%ProjectDate% ... Done!
 echo.
