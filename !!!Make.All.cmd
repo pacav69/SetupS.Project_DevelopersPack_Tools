@@ -77,29 +77,29 @@ copy "ChangeLog.txt" "%completedfiles%\" /y >nul:
 @REM #######################################################
 :Cleaning
 echo #######################################################
-echo Cleaning up...
-echo.
-echo  Deleting compilied files after upload
-echo #######################################################
-cd "%~dp0"
-:Deleting files
-@REM echo deleting SetupS-*.htm
-if exist "*.htm" del /F /Q "SetupS-*.htm" >nul:
-@REM echo deleting SetupS-*.png
-@REM if exist "SetupS-*.png" del /F /Q "SetupS-*.png" >nul:
-@REM echo deleting 7z
-if exist "*.7z" del /F /Q "*.7z" >nul:
-@REM echo deleting apz
-if exist "*.apz" del /F /Q "*.apz" >nul:
-@REM echo deleting exe
-if exist "*.exe" del /F /Q "*.exe" >nul:
-@REM echo deleting UploadMe.cmd
-if exist "UploadMe.cmd" del /F /Q "UploadMe.cmd" >nul:
-@REM echo deleting update.ini
-if exist "update.ini" del /F /Q "update.ini" >nul:
-@REM echo deleting checksums
-if exist "*.md5" del /F /Q "checksums*.md5" >nul:
-@REM SetupS-title.png
+@REM echo Cleaning up...
+@REM echo.
+@REM echo  Deleting compilied files after upload
+@REM echo #######################################################
+@REM cd "%~dp0"
+@REM :Deleting files
+@REM @REM echo deleting SetupS-*.htm
+@REM if exist "*.htm" del /F /Q "SetupS-*.htm" >nul:
+@REM @REM echo deleting SetupS-*.png
+@REM @REM if exist "SetupS-*.png" del /F /Q "SetupS-*.png" >nul:
+@REM @REM echo deleting 7z
+@REM if exist "*.7z" del /F /Q "*.7z" >nul:
+@REM @REM echo deleting apz
+@REM if exist "*.apz" del /F /Q "*.apz" >nul:
+@REM @REM echo deleting exe
+@REM if exist "*.exe" del /F /Q "*.exe" >nul:
+@REM @REM echo deleting UploadMe.cmd
+@REM if exist "UploadMe.cmd" del /F /Q "UploadMe.cmd" >nul:
+@REM @REM echo deleting update.ini
+@REM if exist "update.ini" del /F /Q "update.ini" >nul:
+@REM @REM echo deleting checksums
+@REM if exist "*.md5" del /F /Q "checksums*.md5" >nul:
+@REM @REM SetupS-title.png
 
 @REM echo  #######################################################
 @REM echo   ### Final cleanup

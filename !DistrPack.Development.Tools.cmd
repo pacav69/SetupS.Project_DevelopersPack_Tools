@@ -169,73 +169,73 @@ if exist %ExtraApp%_v%ProjectDate%.7z.md5 del /F /Q %ExtraApp%_v%ProjectDate%.7z
 if exist "%sc%\originals" echo Originals already exists!
 
 
-@REM #######################################################
-@REM ### Movefiles
-@REM #######################################################
-:Movefiles
-echo Moving files to files directory ...
-set completedfiles=files
+@REM @REM #######################################################
+@REM @REM ### Movefiles
+@REM @REM #######################################################
+@REM :Movefiles
+@REM echo Moving files to files directory ...
+@REM set completedfiles=files
 
-:move files to files directory
-@REM echo moving files to files directory..
-if exist "%completedfiles%" rd /s /q "%completedfiles%" >nul:
-md "%completedfiles%"
-echo copying setups files to files directory..
-@REM set Upload=Yes
-@REM if NOT exist "SetupS-*.htm" echo File not found Change in Make.SetupS-Project.cmd to 'set Upload=Yes'&pause&goto Cleaning
-echo copying htm files to files directory..
-@REM copy "SetupS-*.htm" "%completedfiles%\" /y >nul:
-copy "*.htm" "%completedfiles%\" /y >nul:
-echo copying SetupS-*.png files to files directory..
-@REM copy "%~dp0SetupS-*.png" "%~dp0\%completedfiles%" /y >nul
-echo copying .7z files to files directory..
-@REM SetupS.Project_v23.07.18.1_DevelopersPack.7z
-copy "*.7z" "%completedfiles%\" /y >nul:
-echo copying apz files to files directory..
-@REM SetupS.SendTo.Suite_v23.07.18.1_ssApp.apz
-copy "*.apz" "%completedfiles%\" /y >nul:
-echo copying exe files to files directory..
-@REM SetupS.SendTo.Suite_v23.07.18.1_ssApp.exe
-copy "*.exe" "%completedfiles%\" /y >nul:
-echo copying UploadMe.cmd files to files directory..
-@REM UploadMe.cmd
-copy "UploadMe.cmd" "%completedfiles%\" /y >nul:
-@REM update.ini
-copy "update.ini" "%completedfiles%\" /y >nul:
-echo copying Uchecksums files to files directory..
-@REM checksums_v23.07.18.1.md5
-copy "*.md5" "%completedfiles%\" /y >nul:
-@REM ChangeLog.txt
-copy "ChangeLog.txt" "%completedfiles%\" /y >nul:
-@REM pause
+@REM :move files to files directory
+@REM @REM echo moving files to files directory..
+@REM if exist "%completedfiles%" rd /s /q "%completedfiles%" >nul:
+@REM md "%completedfiles%"
+@REM echo copying setups files to files directory..
+@REM @REM set Upload=Yes
+@REM @REM if NOT exist "SetupS-*.htm" echo File not found Change in Make.SetupS-Project.cmd to 'set Upload=Yes'&pause&goto Cleaning
+@REM echo copying htm files to files directory..
+@REM @REM copy "SetupS-*.htm" "%completedfiles%\" /y >nul:
+@REM copy "*.htm" "%completedfiles%\" /y >nul:
+@REM echo copying SetupS-*.png files to files directory..
+@REM @REM copy "%~dp0SetupS-*.png" "%~dp0\%completedfiles%" /y >nul
+@REM echo copying .7z files to files directory..
+@REM @REM SetupS.Project_v23.07.18.1_DevelopersPack.7z
+@REM copy "*.7z" "%completedfiles%\" /y >nul:
+@REM echo copying apz files to files directory..
+@REM @REM SetupS.SendTo.Suite_v23.07.18.1_ssApp.apz
+@REM copy "*.apz" "%completedfiles%\" /y >nul:
+@REM echo copying exe files to files directory..
+@REM @REM SetupS.SendTo.Suite_v23.07.18.1_ssApp.exe
+@REM copy "*.exe" "%completedfiles%\" /y >nul:
+@REM echo copying UploadMe.cmd files to files directory..
+@REM @REM UploadMe.cmd
+@REM copy "UploadMe.cmd" "%completedfiles%\" /y >nul:
+@REM @REM update.ini
+@REM copy "update.ini" "%completedfiles%\" /y >nul:
+@REM echo copying Uchecksums files to files directory..
+@REM @REM checksums_v23.07.18.1.md5
+@REM copy "*.md5" "%completedfiles%\" /y >nul:
+@REM @REM ChangeLog.txt
+@REM copy "ChangeLog.txt" "%completedfiles%\" /y >nul:
+@REM @REM pause
 
-@REM #######################################################
-@REM ### Cleaning
-@REM #######################################################
-:Cleaning
-echo #######################################################
-echo Cleaning up...
-echo.
-echo  Deleting compilied files after upload
-echo #######################################################
-cd "%~dp0"
-:Deleting files
+@REM @REM #######################################################
+@REM @REM ### Cleaning
+@REM @REM #######################################################
+@REM :Cleaning
+@REM echo #######################################################
+@REM echo Cleaning up...
+@REM echo.
+@REM echo  Deleting compilied files after upload
+@REM echo #######################################################
+@REM cd "%~dp0"
+@REM :Deleting files
 
-if exist "*.htm" del /F /Q "*.htm" >nul:
-@REM echo deleting SetupS-*.png
-@REM if exist "SetupS-*.png" del /F /Q "SetupS-*.png" >nul:
-@REM echo deleting 7z
-if exist "*.7z" del /F /Q "*.7z" >nul:
-@REM echo deleting apz
-if exist "*.apz" del /F /Q "*.apz" >nul:
-@REM echo deleting exe
-if exist "*.exe" del /F /Q "*.exe" >nul:
-@REM echo deleting UploadMe.cmd
-if exist "UploadMe.cmd" del /F /Q "UploadMe.cmd" >nul:
-@REM echo deleting update.ini
-if exist "update.ini" del /F /Q "update.ini" >nul:
-@REM echo deleting checksums
-if exist "*.md5" del /F /Q "*.md5" >nul:
+@REM if exist "*.htm" del /F /Q "*.htm" >nul:
+@REM @REM echo deleting SetupS-*.png
+@REM @REM if exist "SetupS-*.png" del /F /Q "SetupS-*.png" >nul:
+@REM @REM echo deleting 7z
+@REM if exist "*.7z" del /F /Q "*.7z" >nul:
+@REM @REM echo deleting apz
+@REM if exist "*.apz" del /F /Q "*.apz" >nul:
+@REM @REM echo deleting exe
+@REM if exist "*.exe" del /F /Q "*.exe" >nul:
+@REM @REM echo deleting UploadMe.cmd
+@REM if exist "UploadMe.cmd" del /F /Q "UploadMe.cmd" >nul:
+@REM @REM echo deleting update.ini
+@REM if exist "update.ini" del /F /Q "update.ini" >nul:
+@REM @REM echo deleting checksums
+@REM if exist "*.md5" del /F /Q "*.md5" >nul:
 
 @REM echo  #######################################################
 @REM echo   ### Final cleanup
