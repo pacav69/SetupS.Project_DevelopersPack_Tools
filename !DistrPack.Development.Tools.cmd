@@ -50,22 +50,83 @@ goto setText
 set ProjectVersion=13.7.15.0
 goto setText
 
+@REM #######################################################
+@REM ###  setText
+@REM #######################################################
 :setText
 set cYear=2023
 set cHolder=Vergitek Solutions
+
+@REM #######################################################
+@REM ###  WebLink1=sstek.vergitek.com
+@REM #######################################################
 set WebSite1=ssTek Forum
 set WebLink1=sstek.vergitek.com
-set WebSite2=LastOS Team
+
+set domain1=setups@lastos.org
+set ftp1=ftp.vergitek.com
+set Webfolder1=
+set filesini1=filesvergitek.ini
+set mvfilesini1=mvfiles1.ini
+
+
+@REM #######################################################
+@REM ###  WebLink2=www.lastos.org
+@REM #######################################################
+set WebSite2=LastOS Forum
 set WebLink2=www.lastos.org
-set WebSite3=ssTek Distribution
-set WebLink3=dl.bintray.com/sstek
-set WebSite4=ssTek Development
-set WebLink4=sstek.googlecode.com
+set domain2=setups@lastos.org
+set ftp2=ftp.lastos.org
+set Webfolder2=
+set filesini2=fileslastos.ini
+set mvfilesini2=mvfiles.ini
+
+@REM #######################################################
+@REM ###  WebLink7=github
+@REM #######################################################
+set WebSite7=github
+set WebLink7=www.github.com
+
+set domain7=setups@lastos.org
+set ftp7=ftp.lastos.org
+set Webfolder7=
+set filesini7=fileslastos.ini
+set mvfilesini7=mvfiles.ini
+
+@REM set WebSite3=ssTek Distribution
+@REM set WebLink3=dl.bintray.com/sstek
+
+@REM set WebSite4=ssTek Development
+@REM set WebLink4=sstek.googlecode.com
+
 set CoreVersion=%ProjectVersion%
 set sc=Source.Code
 set SFXMaker=ssXFormer
 
+
+:set ANSI colors
+@REM ref: https://ss64.com/nt/syntax-ansi.html
+Set _bBlack=[40m
+Set _fGreen=[32m
+Set _fBGreen=[92m
+Set _fRed=[31m
+Set _fYellow=[33m
+Set _bBlue=[44m
+Set _RESET=[0m
+Set _fBWhite=[97m
+Set _bBWhite=[107m
+
+@REM #######################################################
+@REM ###  Begin
+@REM #######################################################
 :Begin
+echo ###########################################################
+echo.
+echo #    Welcome to  the LastOS SetupS Project Developers Pack tools
+echo #    This will compile and upload the Developers Pack tools
+echo.
+echo ###########################################################
+
 echo Begin ... %ExtraApp% v%ProjectDate%
 set path=%path%;%~dp0bin;%~dp0%sc%\Tools;%~dp0%sc%\Tools\_x86
 cd "%~dp0"
@@ -75,13 +136,19 @@ set AutoIt3="%ProgramFiles%\AutoIt3\AutoIt3.exe"
 if exist "%ProgramFiles(x86)%\AutoIt3\AutoIt3.exe" set AutoIt3="%ProgramFiles(x86)%\AutoIt3\AutoIt3.exe"
 FOR %%i IN (C D E F G H I J K L M N O P Q R S T U V W X Y Z) DO IF EXIST "%%i:\ppApps\AutoIt3\AutoIt3.exe" (SET AutoIt3="%%i:\ppApps\AutoIt3\AutoIt3.exe"& goto MakeBackups)
 
+echo.
+echo *********************************************************
 :MakeBackups of originals
 cd "%~dp0"
 if exist "%sc%\originals" goto exit
 md "%sc%\originals\%ExtraApp%"
 copy "%sc%\%ExtraApp%\%ExtraApp%.htm" "%sc%\originals\%ExtraApp%" /y >nul:
 
+@REM #######################################################
+@REM ###  ::Updating Text
+@REM #######################################################
 :Find And Replace Text for the following (requires: bin\fart.exe)
+
 echo Updating Text ...
 cd "%~dp0"
 fart -q -i "%sc%\%ExtraApp%\%ExtraApp%.htm" "#ExtraApp#" "%ExtraApp%" >nul:
@@ -99,6 +166,9 @@ fart -q -i "%sc%\%ExtraApp%\%ExtraApp%.htm" "#WebLink2#" "%WebLink2%" >nul:
 fart -q -i "%sc%\%ExtraApp%\%ExtraApp%.htm" "#WebSite3#" "%WebSite3%" >nul:
 fart -q -i "%sc%\%ExtraApp%\%ExtraApp%.htm" "#WebLink3#" "%WebLink3%" >nul:
 
+@REM #######################################################
+@REM ###  ::Create Development Tools APZ
+@REM #######################################################
 :Create Development Tools APZ (requires: 7zip)
 echo Constructing the Development Tools package (as APZ)...
 cd "%~dp0"
@@ -110,15 +180,24 @@ xcopy "%~dp0%sc%\%ExtraApp%\*.*" /s/e/y >nul:
 copy "%ExtraApp%_v%ProjectDate%.apz" "..\%ExtraApp%_v%ProjectDate%.apz" /y >nul:
 del /F /Q "%ExtraApp%_v%ProjectDate%.apz" >nul:
 
+@REM #######################################################
+@REM ###  :MakeSFX
+@REM #######################################################
 :MakeSFX
 cd "%~dp0%sc%\%SFXMaker%\"
 %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "%SFXMaker%.au3" -autobuild "%~dp0%ExtraApp%_v%ProjectDate%.apz"
 
+@REM #######################################################
+@REM ###  :RestoreOriginals
+@REM #######################################################
 :RestoreOriginals
 echo Restoring originals...
 cd "%~dp0"
 call !RestoreOriginals.cmd
 
+@REM #######################################################
+@REM ###  :Create Checksums
+@REM #######################################################
 :Create Checksums (requires: md5sum.exe)
 echo Calculating md5 checksums...
 cd "%~dp0"
@@ -127,6 +206,9 @@ if exist %ExtraApp%_v%ProjectDate%.7z del /F /Q %ExtraApp%_v%ProjectDate%.7z >nu
 if exist %ExtraApp%_v%ProjectDate%.apz rename %ExtraApp%_v%ProjectDate%.apz %ExtraApp%_v%ProjectDate%.7z
 md5sum %ExtraApp%_v%ProjectDate%.7z >%ExtraApp%_v%ProjectDate%.7z.md5
 
+@REM #######################################################
+@REM ###  :Upload .apz
+@REM #######################################################
 :Upload .apz
 echo Upload? %DoUploads%
 echo.
@@ -144,12 +226,18 @@ rem %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebL
 rem call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe "Everything needed to work with the Full Developers Package." Type-Executable,Type-Archive,OpSys-Windows
 rem call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe.md5 "MD5 Checksums"
 
+@REM #######################################################
+@REM ###  :ssTekForum
+@REM #######################################################
 :ssTekForum (requires cURL)
 %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink1%"
 call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe sstek/files/ .\ ssTek
 call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe.md5 sstek/files/ .\ ssTek
 call UploadMe.cmd %ExtraApp%.htm sstek/files/ .\ ssTek
 
+@REM #######################################################
+@REM ###  :LastOS
+@REM #######################################################
 :LastOS (requires cURL)
 %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink2%"
 rem call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe files/ .\ LastOS
@@ -159,6 +247,9 @@ call UploadMe.cmd %ExtraApp%.htm files/ .\ LastOS
 Goto Exit
 
 :Exit
+@REM #######################################################
+@REM ###  :Cleaning up
+@REM #######################################################
 echo Cleaning up...
 cd "%~dp0"
 %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "Kill"
@@ -255,6 +346,9 @@ if exist "%sc%\originals" echo Originals already exists!
 @REM if exist "%~dp0%sc%\%EditorPath%\files" rd /s /q "%~dp0%sc%\%EditorPath%\files" >nul:
 @REM if exist "%sc%\originals" echo Originals already exists!
 
+@REM echo  #######################################################
+@REM echo   ### Done
+@REM echo #######################################################
 echo.
 echo %ExtraApp% v%ProjectDate% ... Done!
 echo.
