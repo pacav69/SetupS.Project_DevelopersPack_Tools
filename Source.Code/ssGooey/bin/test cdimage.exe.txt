@@ -1,0 +1,1 @@
+start /wait cdimage.exe -l"CRMPXVOL_EN" -t06/17/2009,12:00:00 -h -j1 -m -o -b%SYSTEMDRIVE%\x7b5d9m3.bin %SYSTEMDRIVE%\eXP-TMP-XP64 %SYSTEMDRIVE%\02.Windows.XP.Professional.SP2.x64.June.2009.iso

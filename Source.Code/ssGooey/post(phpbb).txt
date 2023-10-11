@@ -1,0 +1,18 @@
+I've decided to [i]RENAME[/i] the ssTEK-ssWPI v9 to [I][B]ssGooey v1[/B][/I] for several important reasons:
+
+[LIST][*]WPI stands for [U]W[/U]indows [U]P[/U]ost (or Pre) [U]I[/U]nstaller. But ssGooey will basically be a front-end for [I]SetupS[/I]. It can also be used as a pp-launcher. And it'll not be exclusive to Windows either. ;)
+[list][/list][*]The development parallels work being done on LastOS's RealBASIC version. The two apps were even sharing the same major version number! -- this is very confusing even to the developers :confused:
+[list][/list][*]Though the two apps appear similar and ssGooey appears to be a fork of ssWPI, in actuality their goals are very DIFFERENT:
+[list][/list][LIST]
+[*]ssWPI has a rather long history already and is an on-going effort by a rather talented team at LastOS; whereas, ssGooey has been coded "from scratch" by yours truely from the already available core routines used by the SetupS project.
+[list][/list][*]ssWPI is using the commercial RealStudio as its development platform ... ssGooey will be more in tune with the goals of open-source software by using the freeware AutoIt as its development platform instead. 
+[I]Note: the above two points make it clear that ssGooey is not a fork of ssWPI since they share no code (or even a development platform) in common with each other.[/I]
+[list][/list][*]LastOS's ssWPI is geared more towards the OS-modder scene and as such carries with it a [i]potentially[/i] unwanted and therefore, a [i]possible[/i] association to Warez. ssGooey on the other hand will be aimed towards general end-users and IT professionals alike.
+[list][/list][*]Finally, SetupS deserves to have a [i]standalone front-end[/i] devoted to showcasing some of its best features.
+[/LIST][/LIST]
+Hopefully, the renaming and re-versioning will help distinguish the two apps better :)
+
+[hr]
+Updated to v8.11.10.31  ... See [url=http://sstek.vergitek.com/forum/viewtopic.php?f=16&t=93&p=1166#p1166]first post[/url] for the goodies.
+
+Enjoy!

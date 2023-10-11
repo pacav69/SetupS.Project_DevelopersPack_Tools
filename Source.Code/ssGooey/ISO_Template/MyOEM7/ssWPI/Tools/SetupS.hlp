@@ -1,0 +1,27 @@
+SetupS v8.12.1.0 (Core v8.12.1.0) Copyright (c) 2011, LastOS and ssTek
+
+Usage: SetupS [Input] [<Switches>...]
+
+Input: <path>|<file_name>|<archive_name>
+  <path>: folder containing a SetupS recognized file via a command-line, shortcut, or with SendTo.
+  <file_name>: a SetupS recognized file via a command-line, shortcut, or with "SendTo", or "Open With", or by a double-click.
+  <archive_name>: an archive containing a SetupS recognized file via a command-line, shortcut, or with SendTo.
+
+<Switches>
+  -Verbose: Show progress as both splash text and tray-balloon tips. 
+  -Mute|Silent|Quiet: Totally silent install; hides everything including system tray icon and balloon tips.
+  -TrayOnly: Show progress only as balloon tips from the tray. Must have balloon tips enabled!
+  -SplashOnly: Show progress only as splash text/message boxes and hides both the tray icon and any balloon tips from the tray.
+  -SplashOnTop=Yes|No : "Always On Top" option for Splash Text. Default=No
+  -Wait|NoWait: Depends whether or not you need to hold onto the SetupS(x86) process and return to it after SetupS(x64) is finished. Dual-architecture ppApp-mode only. (Default is 'Wait').
+  -KillLauncher={NameOfLauncher}|KillProcess={NameOfProcess}: If you need to close a launcher or process. Especially useful if using the 'NoWait' switch above.
+  -Regenerate : Force this function on any folder/file passed.
+  -Fadertainer=On|Off : Default = Off
+  -FaderSpeed={seconds} : Number of seconds to Fade in or fade out. Default=.5. IE, -FaderSpeed=.3
+  -FaderLocation=TL|TC|TR|ML|MC|MR|BL|BC|BR : T=Top, L=Left, R=Right, C=Center, M=Middle, B=Bottom
+  -FaderOnTop=Yes|No : Fadertainer Option for use "Always On Top". Default=Yes  
+  -Help|About|?: This help file.
+
+A valid recognized SetupS file is one of the following: SetupS.app, ssApp.app, ppApp.app, or ppGame.ppg. Also, any type of archive with the extension '.apz' or '.pgz' containing a recognized SetupS file as listed above.
+
+Usage example: SetupS.exe "D:\ppGamesInstalls\My_ppGame.pgz" -TrayOnly 

@@ -1,0 +1,2 @@
+.au	AU Format Sound	WMP11.AssocFile.AU	"C:\Program Files (x86)\Windows Media Player\wmplayer.exe" /Open "%L"	C:\Windows\system32\wmploc.dll,-730		
+.avi	Media file	aviSetupS	%ppApps%\VLCMediaPlayer\vlc.exe "%1"	%ppApps%\VLCMediaPlayer\vlc.exe,0	"%ppApps%\VirtualDub\VirtualDub.exe" "%1"	

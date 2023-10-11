@@ -1,0 +1,174 @@
+﻿
+[Български]
+;Translated by Martin Kostov
+
+;COMMON VALUES
+LOKBUTTON=Приеми
+LCANCELBUTTON=Затвори
+LSAVEASBUTTON=Запиши като...
+LANALYZEBUTTON=Анализ
+LDEFRAGBUTTON=Подреждане
+LCLOSEBUTTON=Затвори
+LRESTARTBUTTON=Рестартиране
+LLATERBUTTON=По късно
+LREPORTBUTTON=Направи доклад...
+LSTOPBUTTON=Спри
+LBROWSEBUTTON=Търси...
+LERROR=Грешка
+LENABLED=Пуснато
+LDISABLED=Спряно
+LNOTSUPPORTED=Не се поддържа
+LREGREPLACE=Грешка - "RegReplaceKey" е забранен. Рестартирайте Windows и пробвайте наново.
+LRESTOREPOINTNOT="Restore Point" не се поддържа.
+LCREATINGRESTORE=Създаване на "Restore Point"...
+
+;MAIN WINDOW
+LNEVERUSED=Липсва
+LMENUOPTIONS=Настройки
+LMENUHELP=Помощ
+LMENUABOUT=За програмата
+LOVERVIEW=Преглед
+LLASTDEFRAG=Последно подреждане:
+LSIZERECOVERED=Възстановено пространство:
+LPERCENT=Процент:
+LWOULDLIKE=Какво искате да направите?
+LDEFRAGTITLE=Подреждане на регистрите
+LREGINFOTITLE=Информация за регистрите
+LUPDATEOK=Използвате последната версия.
+LUPDATEDISABLED=Автоматичната проверка за нова версия е спряна.
+LUPDATENEW=Налична е нова версия
+LUPDATEWAIT=Проверка за нова версия. Моля почакайте.
+LMOREINFO=Още...
+LUPDATES=Нови версии на програмата
+
+;ABOUT WINDOW
+LABOUTTITLE=За програмата
+LVERSION=Версия
+LICON=Иконите са разработени от
+
+;OPTIONS WINDOW
+LOPTIONS=Настройки
+LOPTIONSDESCRIPTION=Настройване на програмата.
+LSETTINGS=Основни настройки
+LLANGUAGE=Език (Language)
+LCHKCHECKUPDATE=Автоматична проверка за нова версия на програмата
+LCHECKNOW=Проверка за нова версия сега...
+LCHKDEFRAGMYCOMPUTER=Добави "Defrag Registry..." в контекстното меню в Моят Компютър
+LCHKREGINFOMYCOMPUTER=Добави "Get Registry Information" в контекстното меню в Моят Компютър
+LBACKUPS=Резервни копия
+LAUTOREGFILES=Автоматично прави резервно копие на регистрите преди подреждане
+LAUTORESTOREPOINT=Автоматично прави "Restore Point" преди подреждане
+LBACKUPFOLDER=Папка с резервни копия:
+
+;REGISTRY INFORMATIONS WINDOW
+LINFORMATIONS=Информация
+LREGINFODESCRIPTION=Информация за регистрите в Windows.
+LSO=Операционна система:
+LUSER=Потребител:
+LREGSIZE=Големина:
+LCOLUMNPATH=Местоположение
+LCOLUMNSIZE=Големина
+LREGISTRYFILES=Файлове с регистри
+LNUMBERFILES=Брой файлове:
+
+;DIAGNOSTICS WINDOW
+LDIAGTITLE=Диагностика
+
+;DIAGNOSTIC WINDOW - ADDITIONAL
+LHIVENAME=Име:
+LLOGICALPATH=Логическа пътека:
+LMAPPATH=Карта с пътека:
+LTEMPPATH=Временна пътека:
+LHIVESIZE=Големина:
+LKEY=Ключ:
+LVALIDFILE=Файлът съществува.
+LNOTVALIDFILE=Файлът не съществува.
+
+;DEFRAG WINDOW - First Screen
+LDEFRAGDESCRIPTION=Оптимизиране и Подреждане на регистрите.
+LTITLEPROBLEM=Проблем и решение
+LMAINTEXT=Регистрите непрекъснато се записват и изтриват по време на работа Windows, така с течение на времето те се разбъркват. Този инструмент оптимизира системния регистър, чрез подреждане и премахване на празното пространство.
+LBENEFITS=Quicksys RegDefrag оптимизира като цяло работата на системата и ускорява достъпа до регистрите.
+LTITLESTEPS=Стъпки
+LSTEP1=1. Анализиране на регистрите.
+LSTEP2=2. Преглеждане на анализа.
+LSTEP3=3. Подреждане на регистрите, изисква рестартиране.
+LTITLEANALYZE=Натиснете "Анализ" за да започнете процеса.
+LAUTOBACKUP=Автоматично резервно копие:
+LAUTORESTORE=Автоматичен "Restore Point":
+
+;DEFRAG WINDOW - Second Screen
+LSTATUSANALYZING=Анализиране на регистрите, моля почакайте.
+LPROGRESS=Процес:
+LREADING=Проверка на:
+LSTOPPROCESS=Спиране на процеса...
+
+;DEFRAG WINDOW - Third Screen
+LRESULTS=Резултати от анализа
+LCOMPARATION=Сравнение
+LCONCLUSION=Заключение
+LREGISTRYFRAGMENTATION=Разбъркване
+LCURRENTSIZE=Текуща големина:
+LNEWSIZE=Нова големина:
+LSIZEDIFFERENCE=Разлика:
+LLEGFRAG=разбъркване
+LLEGALLOC=заделеното пространство
+LBACKREGFILES=Направи резервно копие:
+LBACKRESTORE=Направи "Restore Point:
+LCONCLUSION=Заключение
+
+;DEFRAG WINDOW - Fourth Screen
+LDEFRAGCOMPLETED=Подреждането беше успешно!
+LFINISHED=Завършено успешно.
+LRESTARTREQUIRED=Трябва да рестартирате компютъра си за да има ефект.
+LRESTARTMSGBOX=Искате ли да рестартирате сега?
+LHTMLREPORT=Можете да направите HTML доклад с информация от подреждането.
+
+;DEFRAG WINDOW - Others
+LREDEFRAGRESTART=Необходимо е да рестартиране компютъра за да стартирате нов анализ.
+LDEFRAGMSGBOX1=Затворете всички програми.
+LDEFRAGMSGBOX2=Анализирането ще отнеме няколко минути.
+LDEFRAGMSGBOX3=По време на процеса, компютърът може да е временно неизползваем.
+LDEFRAGMSGBOX4=За да започнете натиснете "Yes".
+LFEWFRAGMENTS=Разбъркването е малко. Не е нужно подреждане на регистрите.
+LNOFRAGMENTS=Няма разбъркване. Не е възможно подреждане на регистрите.
+LTOOFRAGMENTS=Разбъркването е голямо. Натиснете "Подреждане" за да оптимизирате регистрите.
+
+;REPORT 
+LNAMEREPORT=Доклад
+LH1=Доклад от подреждането
+LCREATEDBY=Създаден от
+LDATE=Дата:
+LTIME=Време:
+LSUMMARY=Резюме от подреждането
+LREGPROCESSED=Преработени регистри:
+LREGANASTART=Започнати анализа:
+LREGANAFINISHED=Завършени анализа:
+LREGTOTALFINISHED=Общо време за анализиране:
+LREGSIZEBEFORE=Големина преди:
+LREGSIZEAFTER=Големина след:
+LREGSIZEDIFFERENCE=Разлика:
+LREGFILESSUMMARY=Резюме от файлове с регистри
+LCOLUMNREGFILE=Файл с регистри
+LCOLUMNREGBEFORE=Големина преди
+LCOLUMNAFTER=Големина след
+LCOLUMNDIFFERENCE=Разлика
+
+;COMMANDLINE - PROGRESSWINDOW
+LDEFRAGMENT=Подреждане на регистрите
+LDEFRAGNOW=Подреждане:
+
+;NEW PHRASES! Please, translate and send to contact@myquicksys.com!
+LHTMLCREATED=HTML доклада е създаден успешно. 
+LOPENNOW=Отвори сега?
+LNOTHTMLCREATED=Грешка! HTML доклада НЕ е създаден успешно.
+LFILE=Файл
+LFREESPACE=Няма достатъчно място за подреждане. Провери и опитай отново.
+LERROREGREAD=Грешка! Не е възможно да се прочетат регистрите.
+LDONATIONMAIN=Donate and help our team continue offering Quicksys RegDefrag for free.
+LDONATIONDEFRAG=This software is free for you to use, but it takes a lot of effort to build and maintain it. Donate and help our team continue offering Quicksys RegDefrag for free.
+LNEWSLETTER=Newsletter
+LNEWSTEXT=If you want to receive news about Quicksys RegDefrag and compete free licenses of other products, insert your email and click OK.
+LNEWSTHANKYOU=Thank you! You've been successfully added to our list. 
+LNEWSERROR=Error. Please, try again.
+LDONATE=Donate

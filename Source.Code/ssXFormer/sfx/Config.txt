@@ -1,0 +1,6 @@
+;!@Install@!UTF-8!
+MiscFlags="4"
+RunProgram="x86:SetupS.exe -TrayOnly -Fadertainer=On -FaderOnTop=Yes"
+RunProgram="x64:SetupS_x64.exe -TrayOnly -Fadertainer=On -FaderOnTop=Yes"
+GUIMode="1"
+;!@InstallEnd@!

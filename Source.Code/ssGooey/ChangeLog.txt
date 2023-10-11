@@ -1,0 +1,23 @@
+---------------------------------------------
+v14.6.30.0 (June 2014)
+---------------------------------------------
+ADD: Check online for apps to download as well as those available on a local drive.
+
+---------------------------------------------
+v8.11.11.2 (November 2011)
+---------------------------------------------
+FIX: Launch-mode autodetection.
+FIX: Focus given to the Start button ("Install!", "Launch!", or "Play!") after selection 
+rather than to the Options button.
+
+---------------------------------------------
+v8.11.10.31 (October 2011)
+---------------------------------------------
+ADD: "Hide installed" Option.
+ADD: "OS Friendly" Option.
+ADD: "Architecture Friendly" Option.
+
+---------------------------------------------
+v8.10.9.26 (September 2011)
+---------------------------------------------
+CHANGE: Name from ssWPI to ssGooey.

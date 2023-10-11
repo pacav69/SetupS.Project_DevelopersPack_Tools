@@ -1,0 +1,8 @@
+Not really even a Beta yet, but here's what I've got so far. It's extremely stripped down to just some basics but I just wanted to see if such a thing would be feasible. 
+
+Also, since most of the operations are done via switches, the best way to test this out is by use of shortcuts generated from the ppApp ;-)
+
+[list][*][b]ssWPI ppApp (.apz) :[/b]  [url=http://www.lastos.org/team/TheFreezerBox/ssWPIv9/ssWPI_v9.11.3.27-Preview_ppApp.apz]ssWPI_v9.11.3.27-Preview_ppApp.apz[/url][/list]
+[list][*][b]Source Code:[/b]  [url=http://www.lastos.org/team/TheFreezerBox/ssWPIv9/ssWPI_v9.11.3.27_SourceCode.7z]ssWPI_v9.11.3.27_SourceCode.7z[/url][/list]
+
+Enjoy!

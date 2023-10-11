@@ -1,0 +1,20 @@
+SetupS Regenerator v8.12.1.0 (Core v8.12.1.0) Copyright (c) 2011, LastOS and ssTek
+
+Usage: Regenerator [<switches>...]
+
+<Switches>
+  -ppApps|ppGames|ssApps|SetupS: Only shortcuts of this type get created. Otherwise, all.
+  -AllDrives=Yes|No : Default is "No". A "Yes" will force searching all available drives for ppApps/ppGames folders.
+  -Verbose: Show progress as both splash text and tray-balloon tips. 
+  -Mute|Silent|Quiet: Totally silent install; hides everything including system tray icon and balloon tips.
+  -TrayOnly: Show progress only as balloon tips from the tray. Must have balloon tips enabled!
+  -SplashOnly: Show progress only as splash text/message boxes and hides both the tray icon and any balloon tips from the tray.
+  -SplashOnTop=Yes|No : "Always On Top" option for Splash Text. Default=No
+  -Fadertainer=On|Off : Default = Off
+  -FaderSpeed={seconds} : Number of seconds to Fade in or fade out. Default=.5. IE, -FaderSpeed=.3
+  -FaderLocation=TL|TC|TR|ML|MC|MR|BL|BC|BR : T=Top, L=Left, R=Right, C=Center, M=Middle, B=Bottom
+  -FaderOnTop=Yes|No : Fadertainer Option for use "Always On Top". Default=Yes  
+  -FaderInstallsOnly=Yes|No : Fadertainer during installs only. Default=Yes.
+  -Help|?: This help file
+  
+Usage example: Regenerator -ppApps -TrayOnly

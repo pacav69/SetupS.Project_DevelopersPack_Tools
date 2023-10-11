@@ -1,0 +1,56 @@
+SetupS Control Panel v8.12.1.0 (Core v8.12.1.0) Copyright (c) 2011, LastOS and ssTek
+
+Usage: SetupScp [<switches>...]
+
+<Switches>
+Except where noted, these settings affect the defaults for both SetupS & Regenerator as well as SetupS.Control.Panel
+
+Startmenu:
+  -LastXP|Kazz: Force or change to a different SetupS advanced Startmenu sorting-structure(s).
+  -Standard: Force or change to a standard/non-SetupS Startmenu sorting-structure(s).
+  -MenuInstallOnly: Do not sort any Apps/ppGames shortcuts; just the Startmenu structure gets installed.
+  -ReSort: Force sorting of Apps/ppGames using the current Startmenu sorting preference.
+
+ppDrives:
+  -ppAppsDrive=[x]: Sets desired ppApps Drive to x. Over-rides any current setting.
+  -ppGamesDrive=[y]: Sets desired ppGames Drive to y. Over-rides any current setting.
+  -AllDrives: A Regenerator-only option for scanning all drives. Caution: this enables scans of portable and mapped network drives! 
+
+Reporting / notifications:
+  -SplashOnTop=Yes|No : "Always On Top" option for Splash Text.
+  -Verbose: Show progress as both splash text and tray-balloon tips.
+  -Mute|Silent|Quiet: Totally silent install; hides everything including system tray icon and balloon tips.
+  -TrayOnly: Show progress only as balloon tips from the tray. Must have balloon tips enabled!
+  -SplashOnly: Show progress only as splash text/message boxes and hides both the tray icon and any balloon tips 
+               from the tray.
+
+Process without shortcuts:
+  -ssAppsShortcutsSkip: Do not create or process any shortcuts for ssApps.
+  -ppAppsShortcutsSkip: Do not create or process any shortcuts for ppApps.
+  -ppGamesShortcutsSkip: Do not create or process any shortcuts for ppGames.
+
+Logging ("global" settings for SetupS & Regenerator):
+  -Log: Creates activity logs. Files created are in the form "ReportingConsole.000x.txt".
+  -Debug: Turns on Debug-mode. Files created are in the form "DebugConsole.000x.txt".
+
+Fadertainer ("global" settings for SetupS & Regenerator):
+  -Fadertainer=On|Off : Activate or deactivate the Fadertainer.
+  -FaderSpeed={seconds} : Number of seconds to Fade in or fade out. Default=.5. IE, -FaderSpeed=.3
+  -FaderLocation=TL|TC|TR|ML|MC|MR|BL|BC|BR : T=Top, L=Left, R=Right, C=Center, M=Middle, B=Bottom
+  -FaderOnTop=Yes|No : Fadertainer Option for use "Always On Top".
+  -FaderModule={executable} : Module to run in the background with Fadertainer.
+  -FaderInstallsOnly=Yes|No : Fadertainer Option for use "During Installs Only" (Regenerator-only option).
+
+Options ("global" settings for SetupS & Regenerator):
+  -SafeInstall=On|Off : (depreciated/disabled)
+  -SkipOSArch=Yes|No : SetupS/Regenerator option to process or skip apps/games based on the <Architecture> and/or 
+                       <OS> information in an .app/.ppg file.
+
+Auto Update:
+  -AutoUpdate=On|Off : Automatic online updates of the SetupS Sendto Suite using one of the Repo links, below.
+  -Repo={Link} : Primary link to find "Update.ini"
+  -BackupRepo={Link} :  Backup link to find "Update.ini" in case the primary one isn't working.
+
+  -Help|About|?: This help file.
+
+Usage example: SetupSCP.exe -LastXP -Mute -ppGamesDrive=D:

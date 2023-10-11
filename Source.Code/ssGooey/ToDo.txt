@@ -1,0 +1,3 @@
+* Install-mode should use fadertainer (or options for it)
+* Install advanced menus
+* Set ppDrives

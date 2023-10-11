@@ -1,0 +1,30 @@
+---------------------------------------------
+v16.05.12.0 (May 12, 2016)
+---------------------------------------------
+FIX: Shortcut for ssClean Startmenu-only to skip "Dud Install-to paths" & "Deep scan".
+
+---------------------------------------------
+v8.12.0.0 (December 2012)
+---------------------------------------------
+FIX: Previous bug fix would cause some App Install paths to be ignored and not get deleted when they should.
+
+---------------------------------------------
+v8.12.6.20 (June 2012)
+---------------------------------------------
+FIX: a bug where if it found any shortcut without a target that entire app got deleted -- for example, a shortcut to a missing help file.
+
+---------------------------------------------
+v8.11.11.11 (November 2011)
+---------------------------------------------
+CHANGE: Removed the CCleaner component. Too buggy for now. Plus, potential licensing issues would be avoided. Also means the switches "-CleanRegistry" and "-CleanDisk" are disabled.
+
+---------------------------------------------
+v8.11.10.0 (October 2011)
+---------------------------------------------
+CHANGE: StartMenuOnly option/switch is now the default.
+CHANGE: Updated CCleaner to v3.11.1550 (04 Oct 2011)
+
+---------------------------------------------
+v8.11.9.0 (September 2011)
+---------------------------------------------
+CHANGE: Updated CCleaner to v3.10.1525 (25 Aug 2011)

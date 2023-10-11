@@ -1,0 +1,21 @@
+I've decided to [i]RENAME[/i] the ssTEK-ssWPI v9 to [I][B]ssGooey v1[/B][/I] for several important reasons:
+[LIST]
+[*]WPI stands for [U]W[/U]indows [U]P[/U]ost (or Pre) [U]I[/U]nstaller. But ssGooey will basically be a front-end for [I]SetupS[/I]. It can also be used as a pp-launcher. And it'll not be exclusive to Windows either. ;)
+[indent=1][/indent][*]The development parallels work being done on LastOS's RealBASIC version. The two apps were even sharing the same major version number! -- this is very confusing even to the developers :confused:
+[indent=1][/indent][*]Though the two apps appear similar and ssGooey appears to be a fork of ssWPI, in actuality their goals are very DIFFERENT:
+[indent=1][/indent][LIST]
+[*]ssWPI has a rather long history already and is an on-going effort by a rather talented team at LastOS; whereas, ssGooey has been coded "from scratch" by yours truely from the already available core routines used by the SetupS project.
+[indent=1][/indent][*]ssWPI is using the commercial RealStudio as its development platform ... ssGooey will be more in tune with the goals of open-source software by using the freeware AutoIt as its development platform instead. 
+[I]Note: the above two points make it clear that ssGooey is not a fork of ssWPI since they share no code (or even a development platform) in common with each other.[/I]
+[indent=1][/indent][*]LastOS's ssWPI is geared more towards the OS-modder scene and as such carries with it a [i]potentially[/i] unwanted and therefore, a [i]possible[/i] association to Warez. ssGooey on the other hand will be aimed towards general end-users and IT professionals alike.
+[indent=1][/indent][*]Finally, SetupS deserves to have a [i]standalone front-end[/i] devoted to showcasing some of its best features.
+[/LIST][/LIST]
+Hopefully, the renaming and re-versioning will help distinguish the two apps better :)
+
+UPDATE: Here's a preview of what I've got so far. It's extremely stripped down to just some basics but hey, it was practically a freebie on my end ;)
+
+For the "installer", just extract it to a removable media with some "install" folders ("ssAppsInstalls", "ppAppsInstalls", etc.), and run the ssGooey.exe (or set your 'autorun.inf' for it).
+[LIST]
+[*][B]ssGooey ppApp (.apz) :[/B] [URL='http://www.lastos.org/team/Repository/ssGooey_v1.11.10.31-Preview_ppApp.apz']ssGooey_v1.11.10.31-Preview_ppApp.apz[/URL]
+[/LIST]
+Enjoy!

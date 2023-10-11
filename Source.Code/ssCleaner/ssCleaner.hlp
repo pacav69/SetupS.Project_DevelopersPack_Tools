@@ -1,0 +1,12 @@
+#ExtraApp# v#ProjectVersion# (Core v#CoreVersion#) Copyright (c) #cYear#, #cHolder#
+
+Usage: #ExtraApp# [<switches>...]
+
+<Switches>
+  -StartMenuOnly=Yes|No: Determines whether to limit the cleaning to only the StartMenu dud shortcuts or to include all shortcut locations such as Desktop, Sendto, & Quicklaunch. (Default=Yes)
+  -Mute|Silent|Quiet: Totally silent running (including system tray).
+  -TrayOnly: Show progress only as balloon tips from the tray. Must have balloon tips enabled!
+  -SplashOnly: Show progress only as splash text/message boxes and hides both the tray icon and any balloon tips from the tray.
+  -Help|?: This help file.
+  
+Usage example: #ExtraApp#.exe -StartMenuOnly=No

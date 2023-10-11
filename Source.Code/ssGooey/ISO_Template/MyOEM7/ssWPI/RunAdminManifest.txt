@@ -1,0 +1,17 @@
+Open With PE Explorer:
+
+Open Resource Editor
+
+Open Manifest - 1
+
+change:
+
+<requestedExecutionLevel
+          level="asInvoker"
+          
+to
+
+<requestedExecutionLevel
+          level="requireAdministrator"
+
+Save Changes

@@ -1,0 +1,174 @@
+﻿
+[Persian]
+;Translated by Mohammad 
+
+;COMMON VALUES
+LOKBUTTON=تایید
+LCANCELBUTTON=انصراف	
+LSAVEASBUTTON=ذخیره با ...
+LANALYZEBUTTON=آنالیز
+LDEFRAGBUTTON=یکپارچه کردن
+LCLOSEBUTTON=بستن
+LRESTARTBUTTON=شروع دوباره
+LLATERBUTTON=بعدا
+LREPORTBUTTON=تهیه گزارش...
+LSTOPBUTTON=توقف
+LBROWSEBUTTON=یافتن	
+LERROR=خطا
+LENABLED=فعال 
+LDISABLED=غیر فعال
+LNOTSUPPORTED=پشتیبانی نمی کند
+LREGREPLACE=Error - RegReplaceKey غیر فعال است. ویندوز را مجدد راه اندازی کنید و دوباره تلاش کنید.
+LRESTOREPOINTNOT=نقطه بازگشت پشتیبانی نمی شود.
+LCREATINGRESTORE=در حال ایجاد نقطه بازگشت...
+
+;MAIN WINDOW
+LNEVERUSED=هرگز استفاده نشده
+LMENUOPTIONS=گزینه ها
+LMENUHELP=راهنما
+LMENUABOUT=درباره ما
+LOVERVIEW=نگاه کلی
+LLASTDEFRAG=آخرین یکپاچره سازی اجرا شده:
+LSIZERECOVERED=حجم بازیابی شده:
+LPERCENT=درصد:
+LWOULDLIKE=تمایل به انجام چه کاری دارد?
+LDEFRAGTITLE=یکپارچه ساز ریجستری
+LREGINFOTITLE=دریافت اطلاعات ریجستری
+LUPDATEOK=شما در حال استفاده از آخرین نسخه هستید.
+LUPDATEDISABLED=بروز رسانی خودکار غیر فعال است.
+LUPDATENEW=نسخه جدید موجود است.
+LUPDATEWAIT=در حال بررسی برای نسخه جدید، لطفا صبر کنید.
+LMOREINFO=اطلاعات بیشتر...
+LUPDATES=بروز رسانی ها
+
+;ABOUT WINDOW
+LABOUTTITLE=درباره ما
+LVERSION=نسخه
+LICON=توسعه آیکون ها توسط:
+
+;OPTIONS WINDOW
+LOPTIONS=گزینه ها
+LOPTIONSDESCRIPTION=پیکربندی تنظیمات برنامه.
+LSETTINGS=تنظیمات عمومی
+LLANGUAGE=زبان
+LCHKCHECKUPDATE=بررسی برای نسخه جدید به صورت خودکار
+LCHECKNOW=بررسی برای بروز رسانی های جدید همین حالا...
+LCHKDEFRAGMYCOMPUTER=اضافه کردن گزینه "یکپارچه سازی ریجستری..." به منوی زمینه   My Computer 
+LCHKREGINFOMYCOMPUTER=اضافه کردن گزینه "دریافت اطلاعات ریجستری" به منوی زمینه My Computer
+LBACKUPS=نسخه های پشتیبان
+LAUTOREGFILES=قبل از انجام یکپاچره سازی به صورت خودکار از ریجستری نسخه پشتیبان تهیه شود
+LAUTORESTOREPOINT=قبل از یکپارچه سازی به صورت خودکار نقطه بازگشت ایجاد شود
+LBACKUPFOLDER=Backups Folder:
+
+;REGISTRY INFORMATIONS WINDOW
+LINFORMATIONS=اطلاعات
+LREGINFODESCRIPTION=اطلاعات درباره رجیتسری ویندوز
+LSO=سیستم عامل:
+LUSER=کاربر وارد شده:
+LREGSIZE=حجم ریجستری:
+LCOLUMNPATH=مسیر
+LCOLUMNSIZE=اندازه
+LREGISTRYFILES=فایل های ریجستری
+LNUMBERFILES=شماره فایل ها:
+
+;DIAGNOSTICS WINDOW
+LDIAGTITLE=امكانات‌ عيب‌ شناسي‌
+
+;DIAGNOSTIC WINDOW - ADDITIONAL
+LHIVENAME=Hive نام:
+LLOGICALPATH=مسیر منطقی:
+LMAPPATH=مسیر نقشه:
+LTEMPPATH=Temp مسیر:
+LHIVESIZE=Hive اندازه:
+LKEY=کلید:
+LVALIDFILE=فایل موجود.
+LNOTVALIDFILE=فایل موجود نیست.
+
+;DEFRAG WINDOW - First Screen
+LDEFRAGDESCRIPTION=بهینه ساز و فشرده کننده ریجستری ویندوز.
+LTITLEPROBLEM=مشکل و راه حل
+LMAINTEXT=اطلاعات رجیستری با یک عملیات عادی ویندوز به صورت پیوسته در حال نوشته شدن و حذف شدن هستند. اکثر مواقع این اطلاعات چندپاره می شوند.این ابزار با حذف فضا های بیهوده، شکاف ها و چندپارگی ها ریجستری شما را بهینه می کند.
+LBENEFITS=Quicksys RegDefrag تمام اجزای سیستم را بهبود می بخشد و به دسترسی به ریجستری کمک می کند.
+LTITLESTEPS=قدم ها
+LSTEP1=1. آنالیز ریجستری شما.
+LSTEP2=2. بازبینی نتایج آنالیز.
+LSTEP3=3. یکپارچه ساز ریجستری. راه اندازی دوباره، لازم است.
+LTITLEANALYZE=روی "آنالیز"  برای شروع فرآیند کلیک کنید
+LAUTOBACKUP=نسخه پشتیبان خودکار:
+LAUTORESTORE=نقطه بازگشت خودکار:
+
+;DEFRAG WINDOW - Second Screen
+LSTATUSANALYZING=در حال آنالیز رجستری. لطفا صبر کنید.	
+LPROGRESS=فرآیند ها:
+LREADING=بررسی:
+LSTOPPROCESS=در حال توقف فرآیند...
+
+;DEFRAG WINDOW - Third Screen
+LRESULTS=نتایج آنالیز
+LCOMPARATION=مقایسه
+LCONCLUSION=پایان
+LREGISTRYFRAGMENTATION=چند پارگی ریجستری
+LCURRENTSIZE=اندازه فعلی ریجستری:
+LNEWSIZE=اندازه جدید ریجستری:
+LSIZEDIFFERENCE=تفاوت اندازه ها:
+LLEGFRAG=چندپارگی
+LLEGALLOC=فضای تعیین شده
+LBACKREGFILES=ایجاد نسخه پشتیبان از فایل ها:
+LBACKRESTORE=ایجاد نقطه بازگشت:
+LCONCLUSION=پایان
+
+;DEFRAG WINDOW - Fourth Screen
+LDEFRAGCOMPLETED=یکپارچه سازی کامل شده!
+LFINISHED=با موفقیت به اتمام رسید.
+LRESTARTREQUIRED=برای اثر گذاری تغییرات شما باید کامپیوتر خود را دوباره راه اندازی کنید.
+LRESTARTMSGBOX=آیا تمایل دارید الان از نو راه اندازی شود?
+LHTMLREPORT=شما می توانید یک گزارش HTML با اطلاعات یکپارچه سازی ایجاد کنید.
+
+;DEFRAG WINDOW - Others
+LREDEFRAGRESTART=برای آنالیز جدید ریجستری به راه اندازی مجدد کامپیوتر نیاز است.
+LDEFRAGMSGBOX1=بستن همه برنامه ها.
+LDEFRAGMSGBOX2=آنالیز ممکن است چند دقیقه زمان نیاز داشته باشد.
+LDEFRAGMSGBOX3=در طی این فرآیند کامپیوتر شما ممکن است پاسخ ندهد.
+LDEFRAGMSGBOX4=برای پیشروی روی  "Yes" کلیک کنید.
+LFEWFRAGMENTS=چندپارگی کمی پیدا شد، این نیازی به یکپارجه سازی ریجستری ندارد.
+LNOFRAGMENTS=هیچ چندپارگی ای پیدا نشد. یکپارچه سازی ریجستری ممکن نیست
+LTOOFRAGMENTS=چندپارگی های زیادی پیدا شد. برای بهینه سازی ریجستری روی "یکپارچه ساز" کلیک کنید.
+
+;REPORT 
+LNAMEREPORT=گزارش
+LH1=گزارش یکپارچه سازی
+LCREATEDBY=ایجاد شده توسط
+LDATE=تاریخ:
+LTIME=زمان:
+LSUMMARY=خلاصه یکپارچه سازی
+LREGPROCESSED=فایل های ریجستری فرآیند:
+LREGANASTART=آغاز آنالیز ریجستری:
+LREGANAFINISHED=پایان آنالیز ریجستری:
+LREGTOTALFINISHED=مجموع زمان آنالیز ریجستری:
+LREGSIZEBEFORE=اندازه ریجستری قبل:
+LREGSIZEAFTER=اندازه ریجستری بعد:
+LREGSIZEDIFFERENCE=تفاوت اندازه ریجستری:
+LREGFILESSUMMARY=خلاصه فایل های ریجستری
+LCOLUMNREGFILE=فایل ریجستری
+LCOLUMNREGBEFORE=اندازه قبل
+LCOLUMNAFTER=اندازه بعد
+LCOLUMNDIFFERENCE=تفاوت اندازه ها
+
+;COMMANDLINE - PROGRESSWINDOW
+LDEFRAGMENT=یکپارچه ساز ریجستری
+LDEFRAGNOW=در حال یکپارچه سازی:
+
+;NEW PHRASES! Please, translate and send to contact@myquicksys.com ;)
+LHTMLCREATED=گزارش با موفقیت ایجا شد. 
+LOPENNOW=ایا شما می خواهید گزاش را الان باز کنید؟
+LNOTHTMLCREATED=خطا! گزارش با موفقیت ایجاد نشد. لطفا مسیر دیگری انتخاب کنید و دوباره سعی کنید.
+LFILE=فایل
+LFREESPACE=فضای لازم برای یکپارچه سازی موجود نیست. فضای دیسک خود را بررسی کنید و دوباره سعی کنید.
+LERROREGREAD=خطا، خواندن اطلاعات ریجستری امکان پذیر نیست
+LDONATIONMAIN=با هدایا و کمک خود به تیم ما، به ما در ادامه دادن انتشار Quicksys RegDefrag  به صورت رایگان کمک کنید
+LDONATIONDEFRAG=این نرم افزار برای استفاده شما رایگان است، اما ساخت و حمایت از آن تلاش بسیار زیادی می خواهد.با هدایا و کمک خود به تیم ما، به ما در ادامه دادن انتشار Quicksys RegDefrag  به صورت رایگان کمک کنید
+LNEWSLETTER=خبرنامه
+LNEWSTEXT=اگر شما می خواهید اخبار  Quicksys RegDefrag را دریافت کنید و برای لایسنس رایگان دیگر محصولات رقابت کنید، ایمیل خود را وارد کنید و روی "تایید" کلیک کنید
+LNEWSTHANKYOU=با سپاس! شما با موفقیت به لیست ما اضافه شدید.
+LNEWSERROR=خطا. لطفا دوباره سعی کنید.
+LDONATE=هدایا
