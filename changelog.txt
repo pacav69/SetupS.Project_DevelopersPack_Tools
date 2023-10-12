@@ -3,6 +3,10 @@ Note: The goal is to have any additions/changes/options to NOT affect the origin
       not always possible especially when adding new features.
 
 
+---------------------------------------------
+13Oct2023
+---------------------------------------------
+updated Instructions.md for git-large-file-storage (git lfs)
 
 ---------------------------------------------
 12Oct2023

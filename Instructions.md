@@ -72,4 +72,36 @@ http://sites.vergitek.com/sstek/help/ssTek.html
 
 using shift F5 to refresh.
 
+## git-large-file-storage (git lfs)
+GitHub limits the size of files you can track in regular Git repositories.
+The git lfs app uploads the actual file to a github lfs and stores a link in the repo.
+Large files such as EXE, ISO and APZ can be uploaded but there are file size limitations check the website for more details.
+
+more information [here](https://docs.github.com/en/repositories/working-with-files/managing-large-files/)
+
+### How-to
+install git lfs app or git-lfs-windows apz
+
+open git bash cmd
+change to github directory
+
+to check the installation in git bash cmd type:
+
+    git lfs install
+
+add the file extension to track
+eg
+    git lfs track "*.psd"
+
+
+add these in git bash cmd
+
+    git lfs track "*.exe"
+    git lfs track "*.iso"
+    git lfs track "*.apz"
+
+this will add the file extensions to '.gitattributes' file to track.
+
+use shift insert in git bash cmd
+
 
