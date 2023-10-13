@@ -81,11 +81,14 @@ pause
 goto MainMenu
 
 :mainHelp
-cecho. ##############################################################
+cls
+echo. ##############################################################
 echo.
 echo Select file to compile or all
 echo after completion it will copy compiked files to files directory ready for upload
 echo then clean up
+echo   [1]   Development Tools
+echo these are the files needed to create SetupS Suite
 echo.
 pause
 goto MainMenu
