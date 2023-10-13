@@ -51,8 +51,8 @@ echo.                             [6]   Select all files
 echo.
 echo.                             [7]   Cleanup
 echo.
-@REM echo.                             [H]   Help
-@REM echo.
+echo.                             [H]   Help
+echo.
 echo.
 echo.                             [X]   Quit
 echo.
@@ -74,7 +74,7 @@ if errorlevel 1 goto :about
 	@REM if errorlevel 2  set "Tweak=Disable3RDPartyApps"
 :about
 cls
-rcho.############################################################
+echo. ############################################################
 echo.
 echo These are the additional tools used in SetupS suite.
 echo.
@@ -82,7 +82,7 @@ pause
 goto MainMenu
 
 :mainHelp
-cecho.##############################################################
+cecho. ##############################################################
 echo.
 echo Select file to compile or all
 echo after completion it will copy compiked files to files directory ready for upload
