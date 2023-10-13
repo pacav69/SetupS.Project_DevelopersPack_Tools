@@ -1,0 +1,25 @@
+---------------------------------------------
+v16.7.20.0 (July 20, 2016)
+---------------------------------------------
+CHANGE: Updated to include the latest SetupS components & tools.
+CHANGE: [ssCore] DualArch "Wait" parameter now defaults to "off" or "NoWait".
+
+---------------------------------------------
+v16.5.21.0 (May 21, 2016)
+---------------------------------------------
+CHANGE: Updated 7-Zip to v16.02
+
+---------------------------------------------
+v16.05.12.0 (May 12, 2016)
+---------------------------------------------
+CHANGE: Updated 7-Zip to v16.00
+
+---------------------------------------------
+v15.11.23.0 (November 23, 2015)
+---------------------------------------------
+FIX: Missing Font(s) Installer.
+
+---------------------------------------------
+v14.4.5.0 (April 5, 2014)
+---------------------------------------------
+FIX: Bug where the resulting .exe is missing any (uncompressed) subfolders contained within the original .apz/.pgz file.

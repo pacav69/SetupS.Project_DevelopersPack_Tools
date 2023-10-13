@@ -20,15 +20,121 @@ set Upload=Yes
 :Begin
 @REM call !DistrPack.Project.cmd %ProjectVersion% %ProjectDate% %Upload%
 
-call !DistrPack.ExtraApp.cmd %ProjectVersion% %ProjectDate% %Upload% ssXFormer
+@REM #######################################################
+@REM ### Create files
+@REM #######################################################
 
+:MainMenu
+set errorlevel = 0
+set selectall=
+
+cls
+echo.===============================================================================
+echo.                           Dev Pack Tools  - Main Menu
+echo.                          Project version  v%ProjectVersion%
+echo.                          Select file to compile or all
+echo.===============================================================================
+echo.
+echo.                             [A]   About
+echo.
+echo.                             [1]   Development Tools
+echo.
+echo.                             [2]   ssXFormer
+echo.
+echo.                             [3]   ssCleaner
+echo.
+echo.                             [4]   ssFATSorter
+echo.
+echo.                             [5]   ssGooey
+echo.
+echo.                             [6]   Select all files
+echo.
+echo.                             [7]   Cleanup
+echo.
+@REM echo.                             [H]   Help
+@REM echo.
+echo.
+echo.                             [X]   Quit
+echo.
+echo.===============================================================================
+echo.
+choice /C:A1234567HX /N /M "Enter Your Choice: "
+if errorlevel 10 goto :Quit
+if errorlevel 9 goto :MenuHelp
+if errorlevel 8 goto :Movefiles
+if errorlevel 7 set "selectall=AllFiles"  goto :checkfile
+if errorlevel 6  set "ssGooey=y" goto :checkfile
+if errorlevel 5 set "ssFATSorter=y" goto :checkfile
+if errorlevel 4 set "ssCleaner=y" goto :checkfile
+if errorlevel 3 set "ssXFormer=y" goto :checkfile
+if errorlevel 2 set "devtools=y" goto :checkfile
+if errorlevel 1 goto :about
+::-------------------------------------------------------------------------------------------
+
+	@REM if errorlevel 2  set "Tweak=Disable3RDPartyApps"
+:about
+
+@REM checks flag
+:checkfile
+@REM if allfiles then goto setupallfiles ekse compile selected file
+if "%selectall%" equ "AllFiles" (goto setupallfiles) else (goto :compilefiles)
+@REM if "%selectall%" equ "AllFiles" (set "devtools=y" set "ssXFormer=y") else (goto :compilefiles)
+
+@REM set flags for compiling
+:setupallfiles
+set "devtools=y"
+set "ssXFormer=y"
+set "ssCleaner=y"
+set "ssFATSorter=y"
+set "ssGooey=y"
+
+goto :compilefiles
+
+
+:compilefiles
+
+echo.####Compiling All Files########################################################
+
+if "%devtools%" equ "y" goto :devtools
+if "%ssXFormer%" equ "y" goto :ssXFormer
+if "%ssCleaner%" equ "y" goto :ssCleaner
+if "%ssFATSorter%" equ "y" goto :ssFATSorter
+if "%ssGooey%" equ "y" goto :ssGooey
+
+@REM if files are compiled then cleanup
+
+goto Movefiles
+
+ :devtools
+@REM pause
 call !DistrPack.Development.Tools.cmd %ProjectVersion% %ProjectDate% %Upload% Development.Tools
+set "devtools="
+goto compilefiles
+
+:ssXFormer
+call !DistrPack.ExtraApp.cmd %ProjectVersion% %ProjectDate% %Upload% ssXFormer
+set "ssXFormer="
+goto compilefiles
+
+:ssCleaner
 call !DistrPack.ExtraApp.cmd %ProjectVersion% %ProjectDate% %Upload% ssCleaner
+set "ssCleaner="
+goto compilefiles
 
+:ssFATSorter
 call !DistrPack.ExtraApp.cmd %ProjectVersion% %ProjectDate% %Upload% ssFATSorter
+set "ssFATSorter="
+goto compilefiles
+
+
+:ssGooey
 call !DistrPack.ExtraApp.cmd %ProjectVersion% %ProjectDate% %Upload% ssGooey
+set "ssGooey="
+goto compilefiles
 
 
+
+@REM pause
 @REM #######################################################
 @REM ### Movefiles
 @REM #######################################################
@@ -129,4 +235,5 @@ if exist "*.md5" del /F /Q "*.md5" >nul:
 Echo %_bBWhite%%_bBlue% ####################################################### %_fBGreen%%_bBlack%
 echo.
 
+ :Quit
 :Exit
