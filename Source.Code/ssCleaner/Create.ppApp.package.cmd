@@ -1,10 +1,16 @@
 @echo off
+@REM Create.ppApp.package for ssCleaner_ppApp
+@REM this script is called with appname
+@REM call Create.ppApp.package ssCleaner
+@REM %1 = appname
 
 :Begin
 set sc=Source.Code
 cd "%~dp0"
+@REM  remove old directory and create new one
 if exist "%1_ppApp" rd /s /q "%1_ppApp" >nul:
 md "%1_ppApp" >nul:
+@REM copy files to app directory
 cd "%1_ppApp" >nul:
 copy ..\%1.exe /y >nul:
 copy ..\%1_x64.exe /y >nul:

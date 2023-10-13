@@ -228,10 +228,10 @@ echo.
 if [%DoUploads%]==[No] goto Exit
 cd "%~dp0"
 
-:Bintray (requires cURL)
-%AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink3%"
-call UploadMe.cmd %ExtraApp%_v%ProjectVersion%_ppApp.apz files %ExtraApp% %ProjectVersion%
-call UploadMe.cmd %ExtraApp%_v%ProjectVersion%_ppApp.apz.md5 files %ExtraApp% %ProjectVersion%
+@REM :Bintray (requires cURL)
+@REM %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink3%"
+@REM call UploadMe.cmd %ExtraApp%_v%ProjectVersion%_ppApp.apz files %ExtraApp% %ProjectVersion%
+@REM call UploadMe.cmd %ExtraApp%_v%ProjectVersion%_ppApp.apz.md5 files %ExtraApp% %ProjectVersion%
 
 :GoogleCode (requires python)
 rem %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink4%"

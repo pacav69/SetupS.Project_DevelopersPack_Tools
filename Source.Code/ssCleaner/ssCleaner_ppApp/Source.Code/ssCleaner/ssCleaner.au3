@@ -5,10 +5,10 @@
 #AutoIt3Wrapper_Compression=4
 #AutoIt3Wrapper_Res_Comment=Inspired by the original "Link Luster Clean" by AnneAardvark
 #AutoIt3Wrapper_Res_Description=SetupS Cleaner. Automatically clean all your dead shortcuts & folders from your Start Menu, Desktop, & Quicklaunch.
-#AutoIt3Wrapper_Res_Fileversion=16.10.2.2
+#AutoIt3Wrapper_Res_Fileversion=23.10.08.0
 #AutoIt3Wrapper_Res_LegalCopyright=© 2023 Vergitek Solutions
 #AutoIt3Wrapper_Res_Language=1033
-#AutoIt3Wrapper_Res_Field=Release Date|2016-10-02
+#AutoIt3Wrapper_Res_Field=Release Date|2023-10-08
 #AutoIt3Wrapper_Res_Field=ssTek Forum|http://sstek.vergitek.com
 #AutoIt3Wrapper_Res_Field=LastOS Team|http://www.lastos.org
 #AutoIt3Wrapper_Res_Field=ssTek Distribution|http://dl.bintray.com/sstek
@@ -20,7 +20,7 @@
 
 #cs ##################################################################################
 
-	ssCleaner v16.10.2.2
+	ssCleaner v23.10.08.0
 	Copyright © 2023, Vergitek Solutions
 	All rights reserved.
 
