@@ -74,7 +74,7 @@ if errorlevel 1 goto :about
 	@REM if errorlevel 2  set "Tweak=Disable3RDPartyApps"
 :about
 cls
-.############################################################
+rcho.############################################################
 echo.
 echo These are the additional tools used in SetupS suite.
 echo.
@@ -82,8 +82,7 @@ pause
 goto MainMenu
 
 :mainHelp
-cls
-.############################################################
+cecho.##############################################################
 echo.
 echo Select file to compile or all
 echo after completion it will copy compiked files to files directory ready for upload
