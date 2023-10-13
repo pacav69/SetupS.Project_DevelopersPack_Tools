@@ -8,6 +8,7 @@ Note: The goal is to have any additions/changes/options to NOT affect the origin
 ---------------------------------------------
 updated Instructions.md for git-large-file-storage (git lfs)
 modified:   !!!Make.All.cmd added mmenu system
+added about text to !!!Make.All file
 
 ---------------------------------------------
 12Oct2023

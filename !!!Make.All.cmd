@@ -60,7 +60,7 @@ echo.===========================================================================
 echo.
 choice /C:A1234567HX /N /M "Enter Your Choice: "
 if errorlevel 10 goto :Quit
-if errorlevel 9 goto :MenuHelp
+if errorlevel 9 goto :mainHelp
 if errorlevel 8 goto :Movefiles
 if errorlevel 7 set "selectall=AllFiles"  goto :checkfile
 if errorlevel 6  set "ssGooey=y" goto :checkfile
@@ -73,6 +73,26 @@ if errorlevel 1 goto :about
 
 	@REM if errorlevel 2  set "Tweak=Disable3RDPartyApps"
 :about
+cls
+.############################################################
+echo.
+echo These are the additional tools used in SetupS suite.
+echo.
+pause
+goto MainMenu
+
+:mainHelp
+cls
+.############################################################
+echo.
+echo Select file to compile or all
+echo after completion it will copy compiked files to files directory ready for upload
+echo then clean up
+echo.
+pause
+goto MainMenu
+
+
 
 @REM checks flag
 :checkfile
