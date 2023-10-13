@@ -1,6 +1,7 @@
 <!-- readme.md -->
 
 # SetupS.Project Developers Pack Part.Deux
+These are the additional tools used in SetupS suite.
 
 ![setups title](files/SetupS-title.png)
 ## LastOS Website

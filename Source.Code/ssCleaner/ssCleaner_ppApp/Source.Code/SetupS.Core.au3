@@ -5,7 +5,7 @@
 #include-once
 #cs ##################################################################################
 
-	SetupS Project Core (Common Declarations & Functions) v23.10.08.0
+	SetupS Project Core (Common Declarations & Functions) v16.10.2.2
 	Copyright © 2023, Vergitek Solutions
 	All rights reserved.
 
@@ -79,7 +79,7 @@ Global $KeepStartMenuFolders = False, $KeepStartMenuDefaults = False
 Global $ProgramFilesDir32 = Not Not FileExists(EnvGet('ProgramFiles(x86)')) ;32-bit ProgramFiles directory
 ;Global $SystemDir = @SystemDir ;@WindowsDir & '\System32'
 Global $SystemDir32 = Not Not FileExists(@WindowsDir & '\SYSWOW64') ;32-bit System directory
-Global $SetupS_CoreVer = '23.10.08.0', $AbortDL, $AltDistr[1][2], $AltDistrOrder
+Global $SetupS_CoreVer = '16.10.2.2', $AbortDL, $AltDistr[1][2], $AltDistrOrder
 Global $AboutLink1 = 'http://sstek.vergitek.com', $AboutLink2 = 'http://www.lastos.org', $AboutLink3 = 'http://dl.bintray.com/sstek'
 Global $CopyFromLive, $ppInstall, $AllUsersProfile = EnvGet('ALLUSERSPROFILE')
 Global $LinuxHome = 'z:\home\' & @UserName, $OS_Linux = Not Not FileExists($LinuxHome), $WINEVersion = _GetWINEVersion() ; Linux via Wine handling
@@ -162,8 +162,8 @@ Else
 			EndIf
 		EndIf
 	EndIf
-	;$SetupS_CoreVer = '8.13.3.29' ;And StringInStr($SetupS_CoreVer, '23.10.08.0') ;Use to test v8
-	;$SetupS_CoreVer = '13.3.7.29' ;And StringInStr($SetupS_CoreVer, '23.10.08.0') ;Use to test v13
+	;$SetupS_CoreVer = '8.13.3.29' ;And StringInStr($SetupS_CoreVer, '16.10.2.2') ;Use to test v8
+	;$SetupS_CoreVer = '13.3.7.29' ;And StringInStr($SetupS_CoreVer, '16.10.2.2') ;Use to test v13
 EndIf
 $SetupSFolder = FileGetShortName(ConvertFromVars("%ProgramFiles%\SetupS.SendTo"))
 
@@ -5739,7 +5739,7 @@ Func UpdateMe($UpdateLink, $SetupSInfo, $Attend = False, $UseGUI = True)
 	$App_File = _AppRead($SetupSInfo, False, True)
 	If (StringLeft($App_Title, 1) = '#' And StringRight($App_Title, 1) = '#') Then $App_Title = $ThisAppFilename
 	;$App_BuildType = {given}
-	If StringInStr($App_Version, '23.10.08.0') Then $App_Version = 'v' & $ThisAppVersion
+	If StringInStr($App_Version, '16.10.2.2') Then $App_Version = 'v' & $ThisAppVersion
 	$App_Version = StringReplace($App_Version, 'v', '')
 	$App_InstallPath = ConvertFromVars($App_InstallPath)
 
@@ -6265,10 +6265,10 @@ EndFunc
 	#AutoIt3Wrapper_Icon=SetupS.ico
 	#AutoIt3Wrapper_Outfile=Tools\SetupS.Core.exe
 	#AutoIt3Wrapper_Res_Description=SetupS Project Core (Common Declarations & Functions)
-	#AutoIt3Wrapper_Res_Fileversion=23.10.08.0
+	#AutoIt3Wrapper_Res_Fileversion=16.10.2.2
 	#AutoIt3Wrapper_Res_LegalCopyright=© 2023 Vergitek Solutions
 	#AutoIt3Wrapper_Res_Language=1033
-	#AutoIt3Wrapper_Res_Field=Release Date|2023-10-08
+	#AutoIt3Wrapper_Res_Field=Release Date|2016-10-02
 	#AutoIt3Wrapper_Res_Field=ssTek Forum|http://sstek.vergitek.com
 	#AutoIt3Wrapper_Res_Field=LastOS Team|http://www.lastos.org
 	#AutoIt3Wrapper_Res_Field=ssTek Distribution|http://dl.bintray.com/sstek
