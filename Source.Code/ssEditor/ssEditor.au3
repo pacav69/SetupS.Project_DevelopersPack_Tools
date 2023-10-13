@@ -5,7 +5,7 @@
 #AutoIt3Wrapper_Compression=4
 #AutoIt3Wrapper_Res_Description=SetupS Editor. Edit or build the files used to create ssApps, ppApps, or ppGames
 #AutoIt3Wrapper_Res_Fileversion=#ProjectVersion#
-#AutoIt3Wrapper_Res_LegalCopyright=©#cYear#, #cHolder#
+#AutoIt3Wrapper_Res_LegalCopyright=ï¿½#cYear#, #cHolder#
 #AutoIt3Wrapper_Res_Language=1033
 #AutoIt3Wrapper_Res_Field=Release Date|#ProjectDate#
 #AutoIt3Wrapper_Res_Field=ssTek Forum|http://#WebLink1#
@@ -17,18 +17,18 @@
 #endregion
 
 #cs ##################################################################################
-	
+
 	SetupS Editor v#ProjectVersion#
-	Copyright © #cYear#, #cHolder#
+	Copyright ï¿½ #cYear#, #cHolder#
 	All rights reserved.
-	
+
 	This file is part of the SetupS SendTo Suite.
-	
+
 	The SetupS SendTo Suite is open-source software: you can redistribute it and/or
 	modify it under the terms of the GNU General Public License as published by the
 	Free Software Foundation, either version 3 of the License, or (at your option)
 	any later version of the License.
-	
+
 	DISCLAIMER:
 	The SetupS SendTo Suite is distributed in the hope that it will be useful, but is
 	provided by #cHolder# "AS IS", without warranty of any kind, express or
@@ -41,17 +41,17 @@
 	of contract, strict liability, or tort (including negligence or otherwise) arising
 	from, out of or in connection with the software or the use or other dealings in the
 	software, even if advised of the possibility of such damage.
-	
+
 	See the GNU General Public License for more details. You should have received a
 	copy of the GNU General Public License along with the SetupS SendTo Suite. If not,
 	see <http://www.gnu.org/licenses/>.
-	
+
 #ce ##################################################################################
 #cs ##################################################################################
-	
+
 	Script Function:
 	App to Create Silent SetupS Apps (ssApp, ppApps, ppGames)
-	
+
 #ce ##################################################################################
 #include <..\SetupS.Core.au3>
 
@@ -624,7 +624,7 @@ GUICtrlSetColor(-1, 0x0000FF)
 Global $Combo_Installer = GUICtrlCreateInput("", 53, 80, 252, 21)
 GUICtrlSetColor(-1, 0x000000)
 GUICtrlSetOnEvent(-1, "Combo_InstallerChange")
-Global $Button_Installer = GUICtrlCreateButton("···", 309, 81, 19, 19, $BS_NOTIFY)
+Global $Button_Installer = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 309, 81, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Browse for the Install/Setup program(s) to use for this app")
 GUICtrlSetOnEvent(-1, "Button_InstallerClick")
@@ -718,7 +718,7 @@ GUICtrlSetTip(-1, "Pick the location the app will be installed to, This is impor
 GUICtrlSetOnEvent(-1, "Label_AppPathClick")
 Global $Input_AppPath = GUICtrlCreateInput("", 80, 33, 220, 21, $GUI_SS_DEFAULT_INPUT)
 GUICtrlSetOnEvent(-1, "Input_AppPathChange")
-Global $Button_AppPath = GUICtrlCreateButton("···", 304, 34, 19, 19, $BS_NOTIFY)
+Global $Button_AppPath = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 304, 34, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetOnEvent(-1, "Button_AppPathClick")
 Global $Group_Directives = GUICtrlCreateGroup("Directives (click to add):", 4, 257, 331, 87)
@@ -817,7 +817,7 @@ Global $Group_scLocations = GUICtrlCreateGroup("StartMenu Location(s)", 4, 27, 3
 GUICtrlSetColor(-1, 0x0000FF)
 Global $Input_DefaultMenu = GUICtrlCreateInput("", 78, 48, 222, 21, $GUI_SS_DEFAULT_INPUT)
 GUICtrlSetOnEvent(-1, "Input_DefaultMenuChange")
-Global $Button_BrowseStartMenu = GUICtrlCreateButton("···", 303, 50, 19, 19, $BS_NOTIFY)
+Global $Button_BrowseStartMenu = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 303, 50, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Browse Current User StartMenu")
 GUICtrlSetOnEvent(-1, "Button_BrowseStartMenuClick")
@@ -929,11 +929,11 @@ Global $Button_scNew = GUICtrlCreateButton("2", 352, 213, 20, 20, BitOR($BS_CENT
 GUICtrlSetFont(-1, 16, 400, 0, "Wingdings")
 GUICtrlSetTip(-1, "Create a new Shortcut here")
 GUICtrlSetOnEvent(-1, "Button_scNewClick")
-Global $Button_scUp = GUICtrlCreateButton("ñ", 399, 204, 20, 20, BitOR($BS_CENTER, $BS_NOTIFY, $BS_ICON))
+Global $Button_scUp = GUICtrlCreateButton("ï¿½", 399, 204, 20, 20, BitOR($BS_CENTER, $BS_NOTIFY, $BS_ICON))
 GUICtrlSetFont(-1, 14, 400, 0, "Wingdings")
 GUICtrlSetTip(-1, "Move UP in the list")
 GUICtrlSetOnEvent(-1, "Button_scUpClick")
-Global $Button_scDown = GUICtrlCreateButton("ò", 399, 225, 20, 20, BitOR($BS_CENTER, $BS_NOTIFY, $BS_ICON))
+Global $Button_scDown = GUICtrlCreateButton("ï¿½", 399, 225, 20, 20, BitOR($BS_CENTER, $BS_NOTIFY, $BS_ICON))
 GUICtrlSetFont(-1, 14, 400, 0, "Wingdings")
 GUICtrlSetTip(-1, "Move DOWN in the list")
 GUICtrlSetOnEvent(-1, "Button_scDownClick")
@@ -941,19 +941,19 @@ Global $Button_scNameAdd = GUICtrlCreateButton("+", 376, 204, 20, 20, BitOR($BS_
 GUICtrlSetFont(-1, 16, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Add this shortcut to the definitions list (or press Enter) ")
 GUICtrlSetOnEvent(-1, "Button_scNameAddClick")
-Global $Button_scNameRemove = GUICtrlCreateButton("û", 376, 225, 20, 20, BitOR($BS_CENTER, $BS_NOTIFY, $BS_ICON))
+Global $Button_scNameRemove = GUICtrlCreateButton("ï¿½", 376, 225, 20, 20, BitOR($BS_CENTER, $BS_NOTIFY, $BS_ICON))
 GUICtrlSetFont(-1, 18, 400, 0, "Wingdings")
 GUICtrlSetTip(-1, "Remove this shortcut from the list")
 GUICtrlSetOnEvent(-1, "Button_scNameRemoveClick")
 Global $Combo_scName = GUICtrlCreateCombo("", 76, 203, 245, 100, $GUI_SS_DEFAULT_COMBO)
 GUICtrlSetOnEvent(-1, "Combo_scNameChange")
-Global $Button_scNameBrowse = GUICtrlCreateButton("···", 323, 204, 19, 19, $BS_NOTIFY)
+Global $Button_scNameBrowse = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 323, 204, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Browse the existing Startmenu for shortcuts to use, or keep after an installation (Note: Clears other fields)")
 GUICtrlSetOnEvent(-1, "Button_scNameBrowseClick")
 Global $Input_scTarget = GUICtrlCreateInput("", 76, 225, 245, 21, $GUI_SS_DEFAULT_INPUT)
 GUICtrlSetOnEvent(-1, "Input_scTargetChange")
-Global $Button_scFile = GUICtrlCreateButton("···", 323, 226, 19, 19, $BS_NOTIFY)
+Global $Button_scFile = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 323, 226, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Browse for target. The file that gets run with this shortcut")
 GUICtrlSetOnEvent(-1, "Button_scFileClick")
@@ -961,7 +961,7 @@ Global $Input_scWorkDir = GUICtrlCreateInput("", 76, 247, 245, 21, $GUI_SS_DEFAU
 GUICtrlSetOnEvent(-1, "Input_scWorkDirChange")
 Global $Input_scIcon = GUICtrlCreateInput("", 76, 269, 245, 21, $GUI_SS_DEFAULT_INPUT)
 GUICtrlSetOnEvent(-1, "Input_scIconChange")
-Global $Button_scIcon = GUICtrlCreateButton("···", 323, 270, 19, 19, $BS_NOTIFY)
+Global $Button_scIcon = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 323, 270, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetState(-1, $GUI_DISABLE)
 GUICtrlSetOnEvent(-1, "Button_scIconClick")
@@ -1704,7 +1704,7 @@ GUICtrlSetTip(-1, "The default Startmenu shortcut location (used in the absence 
 GUICtrlSetOnEvent(-1, "Label_DefaultMenu_sscClick")
 Global $Input_DefaultMenu_ssc = GUICtrlCreateInput("", 268, 13, 222, 21, $GUI_SS_DEFAULT_INPUT)
 GUICtrlSetOnEvent(-1, "Input_DefaultMenu_sscChange")
-Global $Button_BrowseStartMenu_ssc = GUICtrlCreateButton("···", 493, 15, 19, 19, $BS_NOTIFY)
+Global $Button_BrowseStartMenu_ssc = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 493, 15, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Browse Current User StartMenu")
 GUICtrlSetOnEvent(-1, "Button_BrowseStartMenu_sscClick")
@@ -1740,7 +1740,7 @@ GUICtrlSetTip(-1, "Pick the location the app will be installed to, This is impor
 GUICtrlSetOnEvent(-1, "Label_AppPath_sscClick")
 Global $Input_AppPath_ssc = GUICtrlCreateInput("", 247, 69, 242, 21, $GUI_SS_DEFAULT_INPUT)
 GUICtrlSetOnEvent(-1, "Input_AppPath_sscChange")
-Global $Button_AppPath_ssc = GUICtrlCreateButton("···", 493, 70, 19, 19, $BS_NOTIFY)
+Global $Button_AppPath_ssc = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 493, 70, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetOnEvent(-1, "Button_AppPath_sscClick")
 Global $Button_ssCreatorClose = GUICtrlCreateButton("Close", 544, 40, 57, 25)
@@ -1764,7 +1764,7 @@ GUICtrlSetOnEvent(-1, "Label_Installer_sscClick")
 Global $Combo_Installer_ssc = GUICtrlCreateInput("", 238, 99, 252, 21)
 GUICtrlSetColor(-1, 0x000000)
 GUICtrlSetOnEvent(-1, "Combo_Installer_sscChange")
-Global $Button_Installer_ssc = GUICtrlCreateButton("···", 494, 100, 19, 19, $BS_NOTIFY)
+Global $Button_Installer_ssc = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 494, 100, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Browse for the Install/Setup program(s) to use for this app")
 GUICtrlSetOnEvent(-1, "Button_Installer_sscClick")
@@ -1774,7 +1774,7 @@ GUICtrlSetTip(-1, "shown in the ssWPI as the name of the option")
 GUICtrlSetOnEvent(-1, "Label_WorkingDir_sscClick")
 Global $Input_WorkingDir_ssc = GUICtrlCreateInput("", 215, 129, 275, 21, $GUI_SS_DEFAULT_INPUT)
 GUICtrlSetOnEvent(-1, "Input_WorkingDir_sscChange")
-Global $Button_WorkingDir_ssc = GUICtrlCreateButton("···", 494, 130, 19, 19, $BS_NOTIFY)
+Global $Button_WorkingDir_ssc = GUICtrlCreateButton("ï¿½ï¿½ï¿½", 494, 130, 19, 19, $BS_NOTIFY)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 GUICtrlSetTip(-1, "Browse for the Install/Setup program(s) to use for this app")
 GUICtrlSetOnEvent(-1, "Button_WorkingDir_sscClick")
@@ -1920,7 +1920,7 @@ GUICtrlSetImage($Button_GrabClipboardPic, $TempPixDir & '\' & $ThisAppFilename &
 ;Detail the About box
 ControlSetText('', '', $Form_About, 'About: ')
 GUICtrlSetData($About_Version, 'Version ' & $ThisAppVersion)
-GUICtrlSetData($About_Copyright, '© #cYear#, #cHolder#')
+GUICtrlSetData($About_Copyright, 'ï¿½ #cYear#, #cHolder#')
 GUICtrlSetData($About_URL, '#WebSite1#')
 GUICtrlSetData($About_URL2, '#WebSite2#')
 GUICtrlSetData($About_URL3, '#WebSite3#')
@@ -5811,7 +5811,7 @@ Func MenuItem_SaveClick()
 			EndSwitch
 	EndSwitch
 	ChangeFilenameScheme('.mp4', $App_File_Path)
-	
+
 	ChangeFilenameScheme('.jpg', $App_File_Path)
 ;~ 	DeleteDuplicates($App_File_Path, GetAppTypeBase($App_Type) & '.jpg', '.jpg')
 	If FileExists(GetAppTypeBase($App_Type) & '.jpg') Then
