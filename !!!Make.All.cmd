@@ -71,7 +71,6 @@ if errorlevel 2 set "devtools=y" goto :checkfile
 if errorlevel 1 goto :about
 ::-------------------------------------------------------------------------------------------
 
-	@REM if errorlevel 2  set "Tweak=Disable3RDPartyApps"
 :about
 cls
 echo. ############################################################
@@ -91,11 +90,9 @@ echo.
 pause
 goto MainMenu
 
-
-
 @REM checks flag
 :checkfile
-@REM if allfiles then goto setupallfiles ekse compile selected file
+@REM if allfiles then goto setupallfiles else compile selected file
 if "%selectall%" equ "AllFiles" (goto setupallfiles) else (goto :compilefiles)
 @REM if "%selectall%" equ "AllFiles" (set "devtools=y" set "ssXFormer=y") else (goto :compilefiles)
 
@@ -107,12 +104,11 @@ set "ssCleaner=y"
 set "ssFATSorter=y"
 set "ssGooey=y"
 
+echo. ####Compiling All Files########################################################
 goto :compilefiles
 
 
 :compilefiles
-
-echo.####Compiling All Files########################################################
 
 if "%devtools%" equ "y" goto :devtools
 if "%ssXFormer%" equ "y" goto :ssXFormer
