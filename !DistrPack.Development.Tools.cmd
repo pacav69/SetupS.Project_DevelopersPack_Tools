@@ -216,6 +216,7 @@ if [%DoUploads%]==[No] goto Exit
 cd "%~dp0"
 copy %ExtraApp%_v%ProjectDate%\%ExtraApp%.htm /y >nul:
 
+@REM bintray no longer exists
 @REM :Bintray (requires cURL)
 @REM %AutoIt3% /ErrorStdOut /AutoIt3ExecuteScript "bin\GetAccountInfo.au3" "%WebLink3%"
 @REM call UploadMe.cmd %ExtraApp%_v%ProjectDate%.exe files %ExtraApp% %ProjectDate%
