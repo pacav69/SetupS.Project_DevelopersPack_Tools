@@ -85,7 +85,7 @@ cls
 echo. ##############################################################
 echo.
 echo Select file to compile or all
-echo after completion it will copy compiked files to files directory ready for upload
+echo after completion it will copy compiled files to files directory ready for upload
 echo then clean up
 echo   [1]   Development Tools
 echo these are the files needed to create SetupS Suite
@@ -120,7 +120,6 @@ if "%ssFATSorter%" equ "y" goto :ssFATSorter
 if "%ssGooey%" equ "y" goto :ssGooey
 
 @REM if files are compiled then cleanup
-
 goto Movefiles
 
  :devtools
