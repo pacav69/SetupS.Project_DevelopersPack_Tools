@@ -11,3 +11,9 @@ mvfiles2.ini
 Development.Tools*.exe
 files/Development.Tools*.exe
 files/Development.Tools*.7z
+files/ssGooey*.apz
+Source.Code/Development.Tools/AutoIt_*.apz
+Source.Code/Development.Tools/Visual.Studio.Code*.apz
+Source.Code/ssGooey/ISO_Template.iso
+*.apz
+*.db
