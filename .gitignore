@@ -9,3 +9,5 @@ mvfiles.ini
 mvfiles1.ini
 mvfiles2.ini
 Development.Tools*.exe
+files/Development.Tools*.exe
+files/Development.Tools*.7z
