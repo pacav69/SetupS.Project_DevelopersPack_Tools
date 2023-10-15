@@ -19,3 +19,4 @@ Source.Code/ssGooey/ISO_Template.iso
 *.db
 
 UploadMe.cmd
+winscp/winscp.log
