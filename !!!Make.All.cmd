@@ -108,7 +108,7 @@ echo ssGooey = %ssGooey%
 echo selectall = %selectall%
 
 
-pause
+@REM pause
 @REM goto MainMenu
 goto :checkfile
 
@@ -232,7 +232,7 @@ call updfiles.cmd %filesini2%
 @REM this will upload the files to the value of  %filesini2%
 call uploadfilesftp.cmd %filesini2%
 
-pause
+@REM pause
 goto :Cleaning
 
 @REM debug
