@@ -15,5 +15,5 @@ files/ssGooey*.apz
 Source.Code/Development.Tools/AutoIt_*.apz
 Source.Code/Development.Tools/Visual.Studio.Code*.apz
 Source.Code/ssGooey/ISO_Template.iso
-*.apz
+# *.apz
 *.db
