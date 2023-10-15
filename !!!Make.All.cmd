@@ -17,18 +17,40 @@ set ProjectDate=2023-10-08
 @REM Upload=yes will also generate SetupS-files.htm file ready for upload
 set Upload=Yes
 
+@REM #######################################################
+@REM ### Begin
+@REM #######################################################
+
 :Begin
 @REM call !DistrPack.Project.cmd %ProjectVersion% %ProjectDate% %Upload%
+
+@REM #######################################################
+@REM ###  WebLink2=www.lastos.org
+@REM #######################################################
+set WebSite2=LastOS Forum
+set WebLink2=www.lastos.org
+set domain2=setups@lastos.org
+set ftp2=ftp.lastos.org
+set Webfolder2=
+set filesini2=fileslastos.ini
+set mvfilesini2=mvfiles.ini
 
 @REM #######################################################
 @REM ### Create files
 @REM #######################################################
 
 :MainMenu
-set errorlevel = 0
-set selectall=
+@REM set errorlevel = 0
+set "selectall="
+set "devtools="
+set "ssXFormer="
+set "ssCleaner="
+set "ssFATSorter="
+set "ssGooey="
+
 
 cls
+color 0A
 echo.===============================================================================
 echo.                           Dev Pack Tools  - Main Menu
 echo.                          Project version  v%ProjectVersion%
@@ -51,6 +73,8 @@ echo.                             [6]   Select all files
 echo.
 echo.                             [7]   Cleanup
 echo.
+echo.                             [8]   Upload files
+echo.
 echo.                             [H]   Help
 echo.
 echo.
@@ -58,18 +82,35 @@ echo.                             [X]   Quit
 echo.
 echo.===============================================================================
 echo.
-choice /C:A1234567HX /N /M "Enter Your Choice: "
-if errorlevel 10 goto :Quit
-if errorlevel 9 goto :mainHelp
+choice /C:A12345678HX /N /M "Enter Your Choice: "
+if errorlevel 11 goto :Quit
+if errorlevel 10 goto :mainHelp
+if errorlevel 9 goto :uploadfiles
 if errorlevel 8 goto :Movefiles
-if errorlevel 7 set "selectall=AllFiles"  goto :checkfile
-if errorlevel 6  set "ssGooey=y" goto :checkfile
-if errorlevel 5 set "ssFATSorter=y" goto :checkfile
-if errorlevel 4 set "ssCleaner=y" goto :checkfile
-if errorlevel 3 set "ssXFormer=y" goto :checkfile
-if errorlevel 2 set "devtools=y" goto :checkfile
+if errorlevel 7 set "selectall=AllFiles"
+if errorlevel 6  set "ssGooey=y"
+if errorlevel 5 set "ssFATSorter=y"
+if errorlevel 4 set "ssCleaner=y"
+if errorlevel 3 set "ssXFormer=y"
+if errorlevel 2 set "devtools=y"
 if errorlevel 1 goto :about
 ::-------------------------------------------------------------------------------------------
+
+goto :checkfile
+
+@REM debug
+echo errorlevel = %errorlevel%
+echo devtools = %devtools%
+echo ssXFormer = %ssXFormer%
+echo ssCleaner = %ssCleaner%
+echo ssFATSorter = %ssFATSorter%
+echo ssGooey = %ssGooey%
+echo selectall = %selectall%
+
+
+pause
+@REM goto MainMenu
+goto :checkfile
 
 :about
 cls
@@ -93,13 +134,17 @@ echo.
 pause
 goto MainMenu
 
-@REM checks flag
+
 :checkfile
+@REM echo checkfile - errorlevel = %errorlevel%
+@REM pause
+
 @REM if allfiles then goto setupallfiles else compile selected file
 if "%selectall%" equ "AllFiles" (goto setupallfiles) else (goto :compilefiles)
 @REM if "%selectall%" equ "AllFiles" (set "devtools=y" set "ssXFormer=y") else (goto :compilefiles)
 
-@REM set flags for compiling
+@REM set flags for compiling.
+@REM if setupallfiles = AllFiles then set all flags to 'y'
 :setupallfiles
 set "devtools=y"
 set "ssXFormer=y"
@@ -113,14 +158,16 @@ goto :compilefiles
 
 :compilefiles
 
+@REM check which file is to be compiled
 if "%devtools%" equ "y" goto :devtools
 if "%ssXFormer%" equ "y" goto :ssXFormer
 if "%ssCleaner%" equ "y" goto :ssCleaner
 if "%ssFATSorter%" equ "y" goto :ssFATSorter
 if "%ssGooey%" equ "y" goto :ssGooey
 
-@REM if files are compiled then cleanup
-goto Movefiles
+@REM if files are finshed compilng then movefiles
+@REM goto Movefiles
+goto uploadfiles
 
  :devtools
 @REM pause
@@ -150,13 +197,57 @@ set "ssGooey="
 goto compilefiles
 
 
+:uploadfiles
+@REM #######################################################
+@REM ### uploadfiles
+@REM #######################################################
+echo Uploading files to ...
+set completedfiles=files
+@REM set sc=Source.Code
+
+@REM create script file
+
+call uploadcreate.cmd
+
+@REM  debug
+@REM echo end uploadcreate
+@REM pause
+
+@REM move files to root\files directory before upload of new files
+goto  Movefiles
+
+:upfiles
+@REM lastos %filesini2%
+@REM this will update the .ini file with the password for ftp
+@REM call updfiles with filename of script
+call updfiles.cmd %filesini2%
+
+
+@REM call updfiles.cmd %mvfilesini1%
+@REM call movedfilesftp.cmd %mvfilesini2%
+
+@REM this will move old  files to  /SetupSoldfies/ then upload the new files using winscp
+@REM log file .\WinSCP\winscp.log
+@REM call uploadfilesftp.cmd %filesini2%
+@REM this will upload the files to the value of  %filesini2%
+call uploadfilesftp.cmd %filesini2%
+
+pause
+goto :Cleaning
+
+@REM debug
+goto  :Quit
+
+
+
+
 
 @REM pause
 @REM #######################################################
 @REM ### Movefiles
 @REM #######################################################
 :Movefiles
-echo Moving files to files directory ...
+@REM echo Moving files to files directory ...
 set completedfiles=files
 set sc=Source.Code
 
@@ -173,9 +264,13 @@ copy "*.htm" "%completedfiles%\" /y >nul:
 @REM echo copying SetupS-*.png files to files directory..
 copy "%~dp0%sc%\SetupS-*.png" "%~dp0\%completedfiles%" /y >nul
 @REM copy "%~dp0SetupS-*.png" "%~dp0\%completedfiles%" /y >nul
+
+if not exist *.7z goto apzcopy
 echo copying .7z files to files directory..
 @REM
 copy "*.7z" "%completedfiles%\" /y >nul:
+
+:apzcopy
 echo copying apz files to files directory..
 @REM SetupS.SendTo.Suite_v23.07.18.1_ssApp.apz
 copy "*.apz" "%completedfiles%\" /y >nul:
@@ -192,8 +287,14 @@ echo copying Checksums files to files directory..
 copy "*.md5" "%completedfiles%\" /y >nul:
 @REM ChangeLog.txt
 copy "ChangeLog.txt" "%completedfiles%\" /y >nul:
+
+echo.
+echo finished copying  files
+echo.
 @REM pause
 
+@REM go back to upfiles to finish uploading
+goto :upfiles
 
 @REM #######################################################
 @REM ### Cleaning
