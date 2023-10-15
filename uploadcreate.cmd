@@ -46,6 +46,11 @@ echo put .\files\Development.Tools*.exe>>%filesini2%
 echo put .\files\Development.Tools*.md5>>%filesini2%
 echo put .\files\Development.Tools*.htm>>%filesini2%
 
+echo put .\files\ss*.apz>>%filesini2%
+echo put .\files\ss*.md5>>%filesini2%
+echo put .\files\ss*.htm>>%filesini2%
+
+
 
 @REM echo put .\files\%ssApp%.apz>>%filesini2%
 @REM echo put .\files\%ppApp%.7z>>%filesini2%

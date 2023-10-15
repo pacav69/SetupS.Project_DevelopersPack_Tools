@@ -6,6 +6,9 @@ Note: The goal is to have any additions/changes/options to NOT affect the origin
 15Oct2023
 ---------------------------------------------
 updated Instructions
+added AutoIt_v3.3.8.1.with.SciTE4AutoIt3_ssApp.apz
+      Visual.Studio.Code_*.apz
+      to .gitignore as these files are too big for github to accept
 
 
 ---------------------------------------------
