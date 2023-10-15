@@ -2,11 +2,18 @@ Note: The goal is to have any additions/changes/options to NOT affect the origin
       behavior if not used or implemented (for backwards compatibility); but sometimes this is
       not always possible especially when adding new features.
 
+---------------------------------------------
+15Oct2023
+---------------------------------------------
+updated Instructions
+
 
 ---------------------------------------------
 13Oct2023
 ---------------------------------------------
 updated Instructions.md for git-large-file-storage (git lfs)
+modified:   !!!Make.All.cmd added mmenu system
+added about text to !!!Make.All file
 
 ---------------------------------------------
 12Oct2023
