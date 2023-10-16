@@ -2,6 +2,7 @@
 
 # SetupS.Project Developers Pack Part.Deux
 These are the additional tools used in SetupS suite.
+refer to the other repo [here](https://github.com/pacav69/SetupS.Project_DevelopersPack)
 
 ![setups title](files/SetupS-title.png)
 ## LastOS Website
