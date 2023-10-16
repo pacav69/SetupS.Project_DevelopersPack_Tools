@@ -2,6 +2,12 @@ Note: The goal is to have any additions/changes/options to NOT affect the origin
       behavior if not used or implemented (for backwards compatibility); but sometimes this is
       not always possible especially when adding new features.
 
+
+---------------------------------------------
+15Oct2023
+---------------------------------------------
+added dev pack reference to readme.md
+
 ---------------------------------------------
 15Oct2023
 ---------------------------------------------
