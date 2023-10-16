@@ -4,5 +4,6 @@ update readme.md with more description
 
 restructure uploading system
 setup upload script using winscp
+upload script using winscp for other ftp sites
 ~~add upload files using cURL~~
 
