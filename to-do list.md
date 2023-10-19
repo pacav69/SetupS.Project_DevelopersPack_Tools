@@ -7,4 +7,5 @@ setup upload script using winscp
 upload script using winscp for other ftp sites
 ~~add upload files using cURL~~
 remove bintray links
+create upload help using winscp
 
