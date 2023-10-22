@@ -2,6 +2,13 @@ Note: The goal is to have any additions/changes/options to NOT affect the origin
       behavior if not used or implemented (for backwards compatibility); but sometimes this is
       not always possible especially when adding new features.
 
+
+---------------------------------------------
+23Oct2023
+---------------------------------------------
+updated helpndoc v8
+new compile ProjectVersion=23.10.23.0
+
 ---------------------------------------------
 15Oct2023
 ---------------------------------------------
